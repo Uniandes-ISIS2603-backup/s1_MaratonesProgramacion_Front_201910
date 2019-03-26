@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EjercicioService} from '../ejercicio.service';
+import {Ejercicio} from '../ejercicio';
 
 @Component({
   selector: 'app-ejercicio-list',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjercicioListComponent implements OnInit {
 
-  constructor() { }
+  /** 
+  * 
+  */
+  constructor(private ejercicioService: EjercicioService) { }
+
+  /** 
+  * la lista de ejercicios 
+  */
+  ejercicios: Ejercicio[];
+
+  /**
+  * Asks the service to update the list of editorials
+  */
+    getEjercicios(): void {
+      this.ejercicioService.getEjercicios().subscribe(ejercicios => this.ejercicios = ejercicios);
+  }
+
 
   ngOnInit() {
+      this.getEjercicios();
   }
 
 }

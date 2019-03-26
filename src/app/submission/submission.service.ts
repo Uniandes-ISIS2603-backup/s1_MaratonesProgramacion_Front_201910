@@ -19,7 +19,7 @@ export class SubmissionService {
   constructor(private http: HttpClient) { }
 
 
-  getEditorials() : Observable<Submission[]>
+  getSubmissions() : Observable<Submission[]>
   {
     return this.http.get<Submission[]>(API_URL + submissions);
   }

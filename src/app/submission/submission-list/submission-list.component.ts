@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Submission} from '../submission';
+import {SubmissionService} from '../submission.service';
 
 @Component({
   selector: 'app-submission-list',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubmissionListComponent implements OnInit {
 
-  constructor() { }
+  
+  /** 
+  * 
+  */
+ constructor(private submissionService: SubmissionService) { }
 
-  ngOnInit() {
-  }
+ /** 
+ * la lista de submissions 
+ */
+ submissions: Submission[];
+
+ /**
+ * Asks the service to update the list of editorials
+ */
+   getSubmissions(): void {
+     this.submissionService.getSubmissions().subscribe(submissions => this.submissions = submissions);
+ }
+
+
+ ngOnInit() {
+     this.getSubmissions();
+ }
+
 
 }

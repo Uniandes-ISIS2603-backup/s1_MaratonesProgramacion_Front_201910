@@ -19,7 +19,7 @@ export class EjercicioService {
   constructor(private http: HttpClient) { }
 
 
-  getEditorials() : Observable<Ejercicio[]>
+  getEjercicios() : Observable<Ejercicio[]>
   {
     return this.http.get<Ejercicio[]>(API_URL + ejercicios);
   }

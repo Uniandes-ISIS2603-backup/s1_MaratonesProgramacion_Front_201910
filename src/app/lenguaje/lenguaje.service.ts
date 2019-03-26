@@ -19,7 +19,7 @@ export class LenguajeService {
   constructor(private http: HttpClient) { }
 
 
-  getEditorials() : Observable<Lenguaje[]>
+  getLenguajes() : Observable<Lenguaje[]>
   {
     return this.http.get<Lenguaje[]>(API_URL + lenguajes);
   }
