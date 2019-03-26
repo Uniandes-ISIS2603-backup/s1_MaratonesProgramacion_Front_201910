@@ -1,9 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import {Submission} from './submission';
+
+
+const API_URL = "../../assets/";
+const submissions = 'submission.json';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubmissionService {
 
-  constructor() { }
+  /**
+    * Constructor of the service
+    * @param http The HttpClient - This is necessary in order to perform requests
+    */
+  constructor(private http: HttpClient) { }
+
+
+  getEditorials() : Observable<Submission[]>
+  {
+    return this.http.get<Submission[]>(API_URL + submissions);
+  }
+
+
 }
