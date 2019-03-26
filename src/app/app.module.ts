@@ -17,6 +17,7 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { EquipoComponent } from './equipo/equipo.component';
 import { EjercicioComponent } from './ejercicio/ejercicio.component';
 import { SubmissionComponent } from './submission/submission.component';
+import { LenguajeComponent } from './lenguaje/lenguaje.component';
 
 
 
@@ -29,7 +30,8 @@ import { SubmissionComponent } from './submission/submission.component';
         UsuarioComponent,
         EquipoComponent,
         EjercicioComponent,
-        SubmissionComponent
+        SubmissionComponent,
+        LenguajeComponent
     ],
     imports: [
         BrowserModule,
