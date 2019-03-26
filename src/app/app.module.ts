@@ -15,6 +15,8 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { EquipoComponent } from './equipo/equipo.component';
+import { EjercicioComponent } from './ejercicio/ejercicio.component';
+import { SubmissionComponent } from './submission/submission.component';
 
 
 
@@ -25,7 +27,9 @@ import { EquipoComponent } from './equipo/equipo.component';
     declarations: [
         AppComponent,
         UsuarioComponent,
-        EquipoComponent
+        EquipoComponent,
+        EjercicioComponent,
+        SubmissionComponent
     ],
     imports: [
         BrowserModule,
