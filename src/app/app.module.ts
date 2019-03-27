@@ -30,15 +30,19 @@ import { AutenticacionComponent } from './autenticacion/autenticacion.component'
       AutenticacionComponent
    ],
    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      HttpClientModule,
-      BrowserAnimationsModule,
-      UsuarioComponent,
-      EquipoComponent,
-      ToastrModule.forRoot(\ntimeOut
-   ]
-}),
+       BrowserModule,
+       AppRoutingModule,
+       HttpClientModule,
+       BrowserAnimationsModule,
+       EquipoComponent,
+       UsuarioComponent,
+       AutenticacionComponent,
+       FormsModule,
+       ToastrModule.forRoot({
+           timeOut: 10000,
+           positionClass: 'toast-bottom-right',
+           preventDuplicates: true,
+       }),
        NgxPaginationModule,
        NgbModule,
    ],
