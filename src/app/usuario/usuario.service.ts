@@ -55,10 +55,10 @@ export class UsuarioService {
     * @param lenguaje The lenguaje
     * @returns True if the lenguaje was posted, false otherwise
     */
-    createLenguaje(usuarioId, lenguaje): Observable<Lenguaje> {
+    /*createLenguaje(usuarioId, lenguaje): Observable<Lenguaje> {
         return this.http.post<Lenguaje>(API_URL + usuarios + '/' + usuarioId + lenguajes, lenguaje);
     }
-
+*/
     /**
         * Updates a new usuario
         * @param usuario The updated usuario

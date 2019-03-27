@@ -1,6 +1,6 @@
 //import { Institucion } from '../institucion/institucion';
 
-export class Book {
+export class Usuario {
     /**
     * El usuario id
     */

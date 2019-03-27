@@ -34,9 +34,9 @@ describe('Service: UsuarioService', () => {
     
      it('#createUsuario should return value from observable',
     (done: DoneFn) => {
-   let usuario:Usuario = {id:0,name:"Prueba",isbn:"987612345",publishingdate: "2017/01/06",image:"Prueba",description:"Prueba",editorial:{ id: 100, name: "Oveja Negra"}};
-    service.createUsuario(usuario).subscribe(value => {
-        expect(value.name).toEqual(usuario.name);
+        let usuario:Usuario = {id:100,rol:"Participante",nombreUsuario:"camilalonart",nombre: "Camila",imagen:"https://farm2.staticflickr.com/1722/28018929057_d3aff402ac_b.jpg",clave:"aBc234$$bb",correo:"mc.londono@losAlpes.edu.co", puntaje:0};
+        service.createUsuario(usuario).subscribe(value => {
+        expect(value.nombreUsuario).toEqual(usuario.nombreUsuario);
         done();
         });
     });
@@ -44,7 +44,7 @@ describe('Service: UsuarioService', () => {
 	it('#getUsuarioDetail should return value from observable',
     (done: DoneFn) => {
     service.getUsuarioDetail(usuarios[0].id).subscribe(value => {
-        expect(value.name).toEqual(usuarios[0].name);
+        expect(value.nombreUsuario).toEqual(usuarios[0].nombreUsuario);
         done();
         });
     });
@@ -58,9 +58,9 @@ describe('Service: UsuarioService', () => {
 	*/
 	it('#updateUsuario should return the usuario updated',
     (done: DoneFn) => {
-	let usuario:Usuario = {id:100,name:"Prueba",isbn:"987612345",publishingdate: "2017/01/06",image:"Prueba",description:"Prueba",editorial:{ id: 100, name: "Oveja Negra"}};
+	let usuario:Usuario = {id:100,rol:"Participante",nombreUsuario:"camilalonart",nombre: "Camila",imagen:"https://farm2.staticflickr.com/1722/28018929057_d3aff402ac_b.jpg",clave:"aBc234$$bb",correo:"mc.londono@losAlpes.edu.co", puntaje:0};
     service.updateUsuario(usuario).subscribe(value => {
-        expect(value.name).toEqual(usuario.name);
+        expect(value.nombreUsuario).toEqual(usuario.nombreUsuario);
         done();
         });
     });
