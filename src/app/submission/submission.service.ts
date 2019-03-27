@@ -5,7 +5,7 @@ import {Submission} from './submission';
 
 
 const API_URL = "../../assets/";
-const submissions = 'submission.json';
+const submissions = 'submissions.json';
 
 @Injectable({
   providedIn: 'root'

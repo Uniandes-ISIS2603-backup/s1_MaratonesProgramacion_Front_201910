@@ -5,6 +5,10 @@
 export class Lenguaje
 {
 
+    /** 
+    * id del lenguaje 
+    */
+    id: number;
 
     /** 
     * el nombre del lenguaje
