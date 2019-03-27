@@ -1,3 +1,5 @@
+import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
+import { LugarCompetenciaComponent } from './LugarCompetencia/LugarCompetencia.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -25,7 +27,8 @@ import { EquipoComponent } from './equipo/equipo.component';
     declarations: [
         AppComponent,
         UsuarioComponent,
-        EquipoComponent
+        EquipoComponent,
+        LugarCompetenciaComponent
     ],
     imports: [
         BrowserModule,
@@ -42,7 +45,8 @@ import { EquipoComponent } from './equipo/equipo.component';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        LugarCompetenciaModule
     ],
     bootstrap: [AppComponent],
     providers: [
