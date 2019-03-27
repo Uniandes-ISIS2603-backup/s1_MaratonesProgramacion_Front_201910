@@ -17,6 +17,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { EquipoComponent } from './equipo/equipo.component';
+import { AutenticacionComponent } from './autenticacion/autenticacion.component';
 
 
 
@@ -26,21 +27,18 @@ import { EquipoComponent } from './equipo/equipo.component';
 @NgModule({
    declarations: [
       AppComponent,
+      AutenticacionComponent
    ],
    imports: [
-       BrowserModule,
-       AppRoutingModule,
-       HttpClientModule,
-       BrowserAnimationsModule,
-       UsuarioComponent,
-        EquipoComponent,
-
-
-       ToastrModule.forRoot({
-           timeOut: 10000,
-           positionClass: 'toast-bottom-right',
-           preventDuplicates: true,
-       }),
+      BrowserModule,
+      AppRoutingModule,
+      HttpClientModule,
+      BrowserAnimationsModule,
+      UsuarioComponent,
+      EquipoComponent,
+      ToastrModule.forRoot(\ntimeOut
+   ]
+}),
        NgxPaginationModule,
        NgbModule,
    ],
