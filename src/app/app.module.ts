@@ -1,3 +1,5 @@
+import { UsuarioDetailComponent } from './usuario/usuario-detail/usuario-detail.component';
+import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -22,35 +24,33 @@ import { EquipoComponent } from './equipo/equipo.component';
 
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        UsuarioComponent,
-        EquipoComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        ModalDialogModule.forRoot(),
-        AuthModule,
-        FormsModule,
-        ToastrModule.forRoot({
-            timeOut: 10000,
-            positionClass: 'toast-bottom-right',
-            preventDuplicates: true,
-        }),
-        NgxPaginationModule,
-        NgxPermissionsModule.forRoot(),
-        NgbModule
-    ],
-    bootstrap: [AppComponent],
-    providers: [
-        {
-            provide: HTTP_INTERCEPTORS,
-            useClass: HttpErrorInterceptor,
-            multi: true
-        }
-    ]
+   declarations: [
+      AppComponent,
+   ],
+   imports: [
+       BrowserModule,
+       AppRoutingModule,
+       HttpClientModule,
+       BrowserAnimationsModule,
+       UsuarioComponent,
+        EquipoComponent,
+
+
+       ToastrModule.forRoot({
+           timeOut: 10000,
+           positionClass: 'toast-bottom-right',
+           preventDuplicates: true,
+       }),
+       NgxPaginationModule,
+       NgbModule,
+   ],
+   bootstrap: [AppComponent],
+   providers: [
+       {
+           provide: HTTP_INTERCEPTORS,
+           useClass: HttpErrorInterceptor,
+           multi: true
+       }
+   ]
 })
-export class AppModule {}
+export class AppModule { }
