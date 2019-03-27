@@ -1,3 +1,19 @@
-<p>
-  ejercicio-list works!
-</p>
+<div class = "container fluid">
+  <div class = "col-md-2">
+    <table class = "table table striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th> Nombre </th>
+            <th> Puntaje </th>
+            <th> Nivel </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let ejercicio of ejercicios">
+            <td> {{ejercicio.name}}</td>
+
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
