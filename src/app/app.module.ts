@@ -1,5 +1,3 @@
-import { UsuarioDetailComponent } from './usuario/usuario-detail/usuario-detail.component';
-import { UsuarioCreateComponent } from './usuario/usuario-create/usuario-create.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -17,7 +15,6 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { EquipoComponent } from './equipo/equipo.component';
-import { AutenticacionComponent } from './autenticacion/autenticacion.component';
 
 
 
@@ -26,8 +23,7 @@ import { AutenticacionComponent } from './autenticacion/autenticacion.component'
 
 @NgModule({
    declarations: [
-      AppComponent,
-      AutenticacionComponent
+      AppComponent
    ],
    imports: [
        BrowserModule,
@@ -36,7 +32,6 @@ import { AutenticacionComponent } from './autenticacion/autenticacion.component'
        BrowserAnimationsModule,
        EquipoComponent,
        UsuarioComponent,
-       AutenticacionComponent,
        FormsModule,
        ToastrModule.forRoot({
            timeOut: 10000,
