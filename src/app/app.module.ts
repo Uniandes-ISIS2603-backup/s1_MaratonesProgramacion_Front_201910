@@ -13,8 +13,6 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-import { UsuarioComponent } from './usuario/usuario.component';
-import { EquipoComponent } from './equipo/equipo.component';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
@@ -26,9 +24,7 @@ import {SubmissionModule} from './submission/submission.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        UsuarioComponent,
-        EquipoComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
