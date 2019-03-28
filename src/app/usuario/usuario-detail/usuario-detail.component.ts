@@ -13,7 +13,7 @@ import {UsuarioDetail} from '../usuario-detail';
     templateUrl: './usuario-detail.component.html',
     styleUrls: ['./usuario-detail.component.css']
 })
-export class BookDetailComponent implements OnInit, OnDestroy {
+export class UsuarioDetailComponent implements OnInit, OnDestroy {
 
     /**
     * The constructor of the component
@@ -44,7 +44,7 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     /**
     * The book whose details are shown
     */
-    bookDetail: UsuarioDetail;
+    usuarioDetail: UsuarioDetail;
 
     /**
     * The other books shown in the sidebar
@@ -68,15 +68,15 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     */
     getUsuarioDetail(): void {
         this.usuarioService.getUsuarioDetail(this.usuario_id)
-            .subscribe(bookDetail => {
-                this.bookDetail = bookDetail;
+            .subscribe(usuarioDetail => {
+                this.usuarioDetail = usuarioDetail;
             });
     }
 
     /**
     * This method retrieves all the books in the Bookstore to show them in the list
     */
-    getOtherBooks(): void {
+    getOtherUsuarios(): void {
         this.usuarioService.getUsuarios()
             .subscribe(books => {
                 this.other_users = books;
@@ -93,9 +93,9 @@ export class BookDetailComponent implements OnInit, OnDestroy {
     */
     ngOnInit() {
         this.usuario_id = +this.route.snapshot.paramMap.get('id');
-        this.bookDetail = new UsuarioDetail();
+        this.usuarioDetail = new UsuarioDetail();
         this.getUsuarioDetail();
-        this.getOtherBooks();
+        this.getOtherUsuarios();
         this.showEdit = true;
     }
 
