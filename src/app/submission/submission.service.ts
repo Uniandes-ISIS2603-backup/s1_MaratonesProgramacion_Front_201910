@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import {Submission} from './submission';
 
 
-const API_URL = "../../assets/";
-const submissions = 'submissions.json';
+const API_URL = "http://localhost:8080/s1_maratones-api/";
+const submissions = '/submissions';
 
 @Injectable({
   providedIn: 'root'

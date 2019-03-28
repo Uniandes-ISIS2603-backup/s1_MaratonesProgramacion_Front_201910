@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 import {Lenguaje} from './lenguaje';
 
 
-const API_URL = "../../assets/";
-const lenguajes = 'lenguajes.json';
+const API_URL = "http://localhost:8080/s1_maratones-api/";
+const lenguajes = '/lenguajes';
 
 @Injectable({
   providedIn: 'root'
