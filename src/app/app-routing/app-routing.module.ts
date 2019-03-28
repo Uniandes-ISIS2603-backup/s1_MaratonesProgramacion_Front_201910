@@ -4,8 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
 import {UsuarioDetailComponent} from '../usuario/usuario-detail/usuario-detail.component';
 import {UsuarioListComponent} from '../usuario/usuario-list/usuario-list.component';
-import {EquipoDetailComponent} from '../equipo/equipo-detail/equipo-detail.component';
-import {EquipoListComponent} from '../equipo/equipo-list/equipo-list.component';
+
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
