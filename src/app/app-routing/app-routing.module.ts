@@ -48,20 +48,6 @@ const routes: Routes = [
                         runGuardsAndResolvers: 'always'
                     }
                 ]
-            },
-            {
-                path: ':equipos',
-                children: [
-                    {
-                        path: 'list',
-                        component: EquipoListComponent
-                    },
-                    {
-                        path: ':id',
-                        component: EquipoDetailComponent,
-                        runGuardsAndResolvers: 'always'
-                    }
-                ]
             }
         ]
     },
