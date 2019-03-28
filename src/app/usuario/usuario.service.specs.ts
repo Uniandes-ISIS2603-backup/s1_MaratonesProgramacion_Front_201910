@@ -2,17 +2,14 @@ import {ComponentFixture, TestBed, getTestBed} from '@angular/core/testing';
 import {APP_BASE_HREF} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
 
-import {Usuario} from './Usuario';
-//import {Lenguaje} from './lenguaje';
-import {UsuarioService} from './Usuario.service';
+import {Usuario} from './usuario';
+import {UsuarioService} from './usuario.service';
 import {AppModule} from '../app.module';
-
 
 describe('Service: UsuarioService', () => {
     let injector: TestBed;
     let service: UsuarioService;
 	const usuarios: Usuario[] = require('../../assets/usuarios.json');
-	//const lenguajes: Lenguaje[] = require('../../assets/lenguajes.json');
     
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -48,18 +45,12 @@ describe('Service: UsuarioService', () => {
         done();
         });
     });
-	/*it('#createLenguaje should return value from observable',
-    (done: DoneFn) => {
-    service.createLenguaje(usuarios[0].id,lenguajes[0]).subscribe(value => {
-        expect(value.name).toEqual(lenguajes[0].name);
-        done();
-        });
-    });
-	*/
+	
+	
 	it('#updateUsuario should return the usuario updated',
     (done: DoneFn) => {
-	let usuario:Usuario = {id:100,rol:"Participante",nombreUsuario:"camilalonart",nombre: "Camila",imagen:"https://farm2.staticflickr.com/1722/28018929057_d3aff402ac_b.jpg",clave:"aBc234$$bb",correo:"mc.londono@losAlpes.edu.co", puntaje:0};
-    service.updateUsuario(usuario).subscribe(value => {
+        let usuario:Usuario = {id:100,rol:"Participante",nombreUsuario:"camilalonart",nombre: "Camila",imagen:"https://farm2.staticflickr.com/1722/28018929057_d3aff402ac_b.jpg",clave:"aBc234$$bb",correo:"mc.londono@losAlpes.edu.co", puntaje:0};
+        service.updateUsuario(usuario).subscribe(value => {
         expect(value.nombreUsuario).toEqual(usuario.nombreUsuario);
         done();
         });
