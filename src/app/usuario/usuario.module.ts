@@ -7,7 +7,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {UsuarioListComponent} from './usuario-list/usuario-list.component';
-import {UsuarioCreateComponent} from './usuario-create/usuario-create.component';
 import {UsuarioAddLenguajeComponent} from './usuario-add-lenguaje/usuario-add-lenguaje.component';
 import {UsuarioEditComponent} from './usuario-edit/usuario-edit.component';
 import {UsuarioAddSubmissionComponent} from './usuario-add-submission/usuario-add-submission.component';
@@ -26,7 +25,7 @@ import {UsuarioService} from './usuario.service';
         ReactiveFormsModule
     ],
     declarations: [
-        UsuarioListComponent, UsuarioDetailComponent, UsuarioCreateComponent, UsuarioAddLenguajeComponent, UsuarioEditComponent
+        UsuarioListComponent, UsuarioDetailComponent, UsuarioAddLenguajeComponent, UsuarioEditComponent
     ],
     providers: [UsuarioService],
     exports: [UsuarioListComponent, UsuarioEditComponent]
