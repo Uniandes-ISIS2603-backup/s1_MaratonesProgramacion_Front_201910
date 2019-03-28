@@ -1,3 +1,29 @@
-<p>
-  usuario-list works!
-</p>
+<div class = "container fluid">
+  <div class = "col-md-12">
+    <table class = "table table striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th> Nombre </th>
+            <th> NombreUsuario </th>
+            <th> Rol </th>
+            <th> Puntaje </th>
+            <th> Correo </th>
+            <th> Id  </th>
+            <th> Clave </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let usuario of usuarios">
+            <td> {{usuario.nombre }} </td>
+            <td> {{usuario.nombreUsuario }} </td>
+            <td> {{usuario.rol }} </td>
+            <td> {{usuario.puntaje }} </td>
+            <td> {{usuario.correo }} </td>
+            <td> {{usuario.id }} </td>
+            <td> {{usuario.clave }} </td>
+
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
