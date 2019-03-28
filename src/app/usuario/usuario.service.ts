@@ -4,13 +4,11 @@ import {HttpClient} from '@angular/common/http';
 
 import {Usuario} from './usuario';
 import {UsuarioDetail} from './usuario-detail';
-//import {Lenguaje} from './lenguaje';
 
 
 import {environment} from '../../environments/environment';
 const API_URL = environment.apiURL;
 const usuarios = '/usuarios';
-//const lenguajes = '/lenguajes';
 
 
 /**
@@ -50,15 +48,7 @@ export class UsuarioService {
         return this.http.get<UsuarioDetail>(API_URL + usuarios + '/' + usuarioId);
     }
 
-    /**
-    * Creates a lenguaje
-    * @param lenguaje The lenguaje
-    * @returns True if the lenguaje was posted, false otherwise
-    */
-    /*createLenguaje(usuarioId, lenguaje): Observable<Lenguaje> {
-        return this.http.post<Lenguaje>(API_URL + usuarios + '/' + usuarioId + lenguajes, lenguaje);
-    }
-*/
+   
     /**
         * Updates a new usuario
         * @param usuario The updated usuario
