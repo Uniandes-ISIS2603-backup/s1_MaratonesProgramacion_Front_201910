@@ -3,14 +3,18 @@
       <table class = "table table-striped">
           <thead class ="thead-dark">
             <tr>
-              <th>Nombre lugarCompetencia</th>
+              <th>id</th>
+              <th>Fecha </th>
+              <th>Ubicacion</th>
+
             </tr>
           </thead>
           <body>
             <tr *ngFor= "let l of lugaresCompetencia">
               <td >
-                  {{l.ubicacion}},
-                  {{l.fecha}}
+                  {{l.id}}
+                  {{l.fecha}},
+                  {{l.ubicacion}}
               </td>
 
             </tr>
