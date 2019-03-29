@@ -1,3 +1,19 @@
-<p>
-  LugarCompetenciaList works!
-</p>
+<div class= "container-fluid" >
+  <div class = "col-md-2">
+      <table class = "table table-striped">
+          <thead class ="thead-dark">
+            <tr>
+              <th>Nombre lugarCompetencia</th>
+            </tr>
+          </thead>
+          <body>
+            <tr *ngFor= "let l of lugaresCompetencia">
+              <td >
+                  {{l.ubicacion}}
+              </td>
+
+            </tr>
+          </body>
+      </table>
+  </div>
+</div>

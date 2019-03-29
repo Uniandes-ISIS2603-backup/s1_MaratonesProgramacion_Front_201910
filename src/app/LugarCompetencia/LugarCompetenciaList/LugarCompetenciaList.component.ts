@@ -1,3 +1,4 @@
+import { LugarCompetencia } from './../lugarCompetencia';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LugarCompetenciaListComponent implements OnInit {
 
+  lugaresCompetencia: LugarCompetencia[];
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
