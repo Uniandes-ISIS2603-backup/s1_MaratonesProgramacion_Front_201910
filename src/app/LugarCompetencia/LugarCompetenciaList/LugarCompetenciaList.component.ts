@@ -1,3 +1,4 @@
+import { LugarCompetenciaService } from './../LugarCompetencia.service';
 import { LugarCompetencia } from './../lugarCompetencia';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LugarCompetenciaListComponent implements OnInit {
 
-  lugaresCompetencia: LugarCompetencia[];
-  constructor() { }
+ 
+  constructor(private lugarCompetenciaService: LugarCompetenciaService) { }
 
+  /**
+   * La lista de lugares de la competencia
+   */
+  lugaresCompetencia: LugarCompetencia[];
+
+  /**
+   * Le pide al servicio que actualice la lista de lugaresCompetencia
+   */
+  getLugaresCompetencia(): void {
+
+  }
   ngOnInit() {
+    this.getLugaresCompetencia();
   }
 
 
