@@ -8,7 +8,7 @@ import { LugarCompetenciaComponent } from './LugarCompetencia.component';
     CommonModule
   ],
   declarations: [LugarCompetenciaComponent,LugarCompetenciaListComponent],
-
+  
   exports: [LugarCompetenciaComponent]
 })
 export class LugarCompetenciaModule { }
