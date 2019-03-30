@@ -1,3 +1,4 @@
+import { CompetenciaListComponent } from './../competencia/competenciaList/competenciaList.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
@@ -5,6 +6,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { LugarCompetenciaListComponent } from '../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 
 const routes: Routes = [
 
@@ -40,6 +42,14 @@ const routes: Routes = [
     {
         path: '**',
         redirectTo: 'home',
+    },
+    {
+        path: 'competencias',
+        component: CompetenciaListComponent
+    },
+    {
+        path: 'lugaresCompetencia',
+        component: LugarCompetenciaListComponent
     }
 ];
 
