@@ -1,3 +1,6 @@
+import { CompetenciaModule } from './competencia/competencia.module';
+import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
+import { LugarCompetenciaComponent } from './LugarCompetencia/LugarCompetencia.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -16,15 +19,18 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
+import { CompetenciaComponent } from './competencia/competencia.component';
 
 
 
+import { UsuarioModule } from './usuario/usuario.module';
 
 
 
 @NgModule({
     declarations: [
         AppComponent
+
     ],
     imports: [
         BrowserModule,
@@ -44,7 +50,9 @@ import {SubmissionModule} from './submission/submission.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        LugarCompetenciaModule,
+        CompetenciaModule
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -55,4 +63,4 @@ import {SubmissionModule} from './submission/submission.module';
         }
     ]
 })
-export class AppModule {}
+export class AppModule { }
