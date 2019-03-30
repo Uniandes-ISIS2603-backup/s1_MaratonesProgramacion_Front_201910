@@ -1,7 +1,3 @@
-
-import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list.component';
-import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
-import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
 import { CompetenciaListComponent } from './../competencia/competenciaList/competenciaList.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
@@ -59,24 +55,10 @@ const routes: Routes = [
     {
         path: 'home',
         component: AuthLoginComponent
-    },/*
+    },
     {
         path: '**',
         redirectTo: 'home',
-
-    }*/
-    {
-        path: 'ejercicios',
-        component: EjercicioListComponent
-    },
-    {
-        path: 'submissions',
-        component: SubmissionListComponent
-    },
-    {
-        path: 'lenguajes',
-        component: LenguajeListComponent
-
     },
     {
         path: 'competencias',
@@ -85,7 +67,6 @@ const routes: Routes = [
     {
         path: 'lugaresCompetencia',
         component: LugarCompetenciaListComponent
-
     }
 ];
 
