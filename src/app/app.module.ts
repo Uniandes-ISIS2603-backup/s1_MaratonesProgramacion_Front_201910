@@ -22,7 +22,6 @@ import {SubmissionModule} from './submission/submission.module';
 import { CompetenciaComponent } from './competencia/competencia.component';
 
 
-
 import { UsuarioModule } from './usuario/usuario.module';
 
 
@@ -52,7 +51,8 @@ import { UsuarioModule } from './usuario/usuario.module';
         NgxPermissionsModule.forRoot(),
         NgbModule,
         LugarCompetenciaModule,
-        CompetenciaModule
+        CompetenciaModule,
+        UsuarioModule
     ],
     bootstrap: [AppComponent],
     providers: [
