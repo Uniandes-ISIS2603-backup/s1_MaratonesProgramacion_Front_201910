@@ -21,7 +21,8 @@ export class LugarCompetenciaListComponent implements OnInit {
    * Le pide al servicio que actualice la lista de lugaresCompetencia
    */
   getLugaresCompetencia(): void {
-
+    this.lugarCompetenciaService.getLugaresCompetencia().subscribe(theLugaresCompetencia => 
+    this.lugaresCompetencia = theLugaresCompetencia);
   }
   ngOnInit() {
     this.getLugaresCompetencia();
