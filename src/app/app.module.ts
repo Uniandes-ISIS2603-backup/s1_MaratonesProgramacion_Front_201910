@@ -1,3 +1,4 @@
+import { CompetenciaModule } from './competencia/competencia.module';
 import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
 import { LugarCompetenciaComponent } from './LugarCompetencia/LugarCompetencia.component';
 import {BrowserModule} from '@angular/platform-browser';
@@ -17,6 +18,7 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { EquipoComponent } from './equipo/equipo.component';
+import { CompetenciaComponent } from './competencia/competencia.component';
 
 
 
@@ -28,7 +30,8 @@ import { EquipoComponent } from './equipo/equipo.component';
         AppComponent,
         UsuarioComponent,
         EquipoComponent,
-        LugarCompetenciaComponent
+        LugarCompetenciaComponent,
+        CompetenciaComponent
     ],
     imports: [
         BrowserModule,
@@ -46,7 +49,8 @@ import { EquipoComponent } from './equipo/equipo.component';
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
         NgbModule,
-        LugarCompetenciaModule
+        LugarCompetenciaModule,
+        CompetenciaModule
     ],
     bootstrap: [AppComponent],
     providers: [
