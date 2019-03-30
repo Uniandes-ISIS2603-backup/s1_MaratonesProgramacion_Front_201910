@@ -26,9 +26,8 @@ import { UsuarioModule } from './usuario/usuario.module';
 
 @NgModule({
     declarations: [
-        AppComponent,
-        LugarCompetenciaComponent,
-        CompetenciaComponent
+        AppComponent
+
     ],
     imports: [
         BrowserModule,
