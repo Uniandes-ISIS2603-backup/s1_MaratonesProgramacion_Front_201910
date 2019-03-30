@@ -1,0 +1,30 @@
+[{
+    "nombre": "Earthquake Prediction",
+    "descripcion": "El ejercicio consiste en elaborar un programa que prediga las replicas y terremotos que se puedan producir a partir de estadisticas",
+    "id": 1234,
+    "inputt": "01010101010",
+    "outputt": "10101010101",
+    "puntaje": 1000,
+    "nivel": 3
+},
+{
+    "nombre": "Lupa atomica",
+    "descripcion": "El ejercicio consiste en elaborar un programa que reconozca el atomo de un elemento segun su apariencia",
+    "id": 5678,
+    "inputt": "01010101010",
+    "outputt": "10101010101",
+    "puntaje": 500,
+    "nivel": 2
+
+},
+{
+    "nombre": "Salva la tierra de los alienigenas",
+    "descripcion": "El ejercicio consiste en elaborar un programa que detecte la posicion mas cercana de un enemigo para que la nave dispare de manera optima",
+    "id": 9012,
+    "inputt": "01010101010",
+    "outputt": "10101010101",
+    "puntaje": 80,
+    "nivel": 1
+
+}
+]

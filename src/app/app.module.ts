@@ -16,20 +16,17 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-import { UsuarioComponent } from './usuario/usuario.component';
-import { EquipoComponent } from './equipo/equipo.component';
 import { CompetenciaComponent } from './competencia/competencia.component';
 
 
 
+import { UsuarioModule } from './usuario/usuario.module';
 
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        UsuarioComponent,
-        EquipoComponent,
         LugarCompetenciaComponent,
         CompetenciaComponent
     ],
@@ -61,4 +58,4 @@ import { CompetenciaComponent } from './competencia/competencia.component';
         }
     ]
 })
-export class AppModule {}
+export class AppModule { }
