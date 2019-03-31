@@ -2,31 +2,31 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 import {ToastrService} from 'ngx-toastr';
 
-import {EditorialService} from '../editorial.service';
+import {ForoService} from '../foro.service';
 
-import {Editorial} from '../editorial';
+import {Foro} from '../foro';
 
 @Component({
-    selector: 'app-editorial-create',
-    templateUrl: './editorial-create.component.html',
-    styleUrls: ['./editorial-create.component.css']
+    selector: 'app-foro-create',
+    templateUrl: './foro-create.component.html',
+    styleUrls: ['./foro-create.component.css']
 })
-export class EditorialCreateComponent implements OnInit {
+export class ForoCreateComponent implements OnInit {
 
     /**
     * Constructor for the component
-    * @param editorialService The editorials' services provider
-    * @param toastrService The toastr to show messages to the user 
+    * @param foroService The editorials' services provider
+    * @param toastrService The toastr para mostrar mensajes al usuario. 
     */
     constructor(
-        private editorialService: EditorialService,
+        private foroService: ForoService,
         private toastrService: ToastrService
     ) {}
 
     /**
-    * The new editorial
+    * El nuevo foro
     */
-    editorial: Editorial;
+    foro: Foro;
 
     /**
     * The output which tells the parent component
@@ -41,22 +41,22 @@ export class EditorialCreateComponent implements OnInit {
     @Output() create = new EventEmitter();
 
     /**
-    * Creates a new editorial
+    * crea un nuevo Foro
     */
-    createEditorial(): Editorial {
-        this.editorialService.createEditorial(this.editorial)
-            .subscribe((editorial) => {
-                this.editorial = editorial;
+    createForo(): Foro {
+        this.foroService.createForo(this.foro)
+            .subscribe((foro) => {
+                this.foro = foro;
                 this.create.emit();
-                this.toastrService.success("The editorial was created", "Editorial creation");
+                this.toastrService.success("The Foro was created", "Foro creation");
             }, err => {
                 this.toastrService.error(err, "Error");
             });
-        return this.editorial;
+        return this.foro;
     }
 
     /**
-    * Informs the parent component that the user no longer wants to create an editorial
+    * Informs the parent component that the user no longer wants to create a Foro
     */
     cancelCreation(): void {
         this.cancel.emit();
@@ -66,6 +66,6 @@ export class EditorialCreateComponent implements OnInit {
     * This function will initialize the component
     */
     ngOnInit() {
-        this.editorial = new Editorial();
+        this.foro = new Foro();
     }
 }

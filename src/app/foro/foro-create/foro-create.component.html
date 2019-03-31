@@ -6,11 +6,11 @@
         <br>
         <form name="foro" (ngSubmit)="f.form.valid && createForo()" #f="ngForm" novalidate>
             <div class="form-group">
-                <label for="foroName"><b>Name</b></label>
-                <input type="text" name="editorialName" class="form-control" id="editorialName" [(ngModel)]="editorial.name"
-                    #editorialName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && editorialName.invalid }" required>
+                <label for="foroNombre"><b>Nombre</b></label>
+                <input type="text" name="editorialName" class="form-control" id="foroNombre" [(ngModel)]="foro.nombre"
+                    #foroNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && foroNombre.invalid }" required>
                 <div class="invalid-feedback">
-                    <div>The editorial's name is missing</div>
+                    <div>El nombre del foro está faltando</div>
                 </div>
             </div>
             <div class="row form-inline justify-content-center align-self-center">

@@ -5,15 +5,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {ActivatedRoute, convertToParamMap} from '@angular/router';
 
 import {AppModule} from '../../app.module';
-import { EditorialCreateComponent } from './editorial-create.component';
+import { ForoCreateComponent } from './foro-create.component';
 import {AppRoutingModule} from '../../app-routing/app-routing.module';
-import {EditorialService} from '../editorial.service';
-import {Editorial} from '../editorial';
+import {ForoService} from '../foro.service';
+import {Foro} from '../foro';
 
 
-describe('EditorialCreateComponent', () => {
-	let component: EditorialCreateComponent;
-	let fixture: ComponentFixture<EditorialCreateComponent>;
+describe('ForoCreateComponent', () => {
+	let component: ForoCreateComponent;
+	let fixture: ComponentFixture<ForoCreateComponent>;
     
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -24,7 +24,7 @@ describe('EditorialCreateComponent', () => {
                     provide: APP_BASE_HREF,
                     useValue: ''
                 }, 
-                EditorialService,
+                ForoService,
                 {
                     provide: ActivatedRoute,
                     useValue: {
@@ -38,7 +38,7 @@ describe('EditorialCreateComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(EditorialCreateComponent);
+        fixture = TestBed.createComponent(ForoCreateComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
