@@ -55,8 +55,12 @@ const routes: Routes = [
         component: SubmissionListComponent
     },
     {
-        path: 'lenguajes',
-        component: LenguajeListComponent
+        path: 'foros',
+        component: ForoListComponent
+    },
+    {
+        path: 'foros',
+        component: ForoListComponent
     }
 ];
 
