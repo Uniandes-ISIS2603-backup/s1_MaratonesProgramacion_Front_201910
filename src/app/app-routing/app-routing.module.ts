@@ -1,6 +1,8 @@
 import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list.component';
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
+import { ForoListComponent } from './../foro/foro-list/foro-list.component';
+import { ComentarioListComponent } from './../comentario/comentario-list/comentario-list.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
