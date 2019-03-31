@@ -2,15 +2,15 @@
     <div class="col-3"></div>
     <div class="col-6">
         <br>
-        <h2 class="text-center">Crea un foro</h2>
+        <h2 class="text-center">Crea un comentario</h2>
         <br>
         <form name="comentario" (ngSubmit)="f.form.valid && createComentario()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="ComentarioNombre"><b>Nombre</b></label>
-                <input type="text" name="editorialName" class="form-control" id="foroNombre" [(ngModel)]="foro.nombre"
-                    #foroNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && foroNombre.invalid }" required>
+                <input type="text" name="comentarioNombre" class="form-control" id="comnetarioNombre" [(ngModel)]="comentario.nombre"
+                    #comentarioNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && comenatarioNombre.invalid }" required>
                 <div class="invalid-feedback">
-                    <div>El nombre del foro está faltando</div>
+                    <div>El nombre del comentario está faltando</div>
                 </div>
             </div>
             <div class="row form-inline justify-content-center align-self-center">

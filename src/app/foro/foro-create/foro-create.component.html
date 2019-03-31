@@ -7,7 +7,7 @@
         <form name="foro" (ngSubmit)="f.form.valid && createForo()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="foroNombre"><b>Nombre</b></label>
-                <input type="text" name="editorialName" class="form-control" id="foroNombre" [(ngModel)]="foro.nombre"
+                <input type="text" name="foroNombre" class="form-control" id="foroNombre" [(ngModel)]="foro.nombre"
                     #foroNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && foroNombre.invalid }" required>
                 <div class="invalid-feedback">
                     <div>El nombre del foro está faltando</div>
