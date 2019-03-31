@@ -59,8 +59,8 @@ const routes: Routes = [
         component: ForoListComponent
     },
     {
-        path: 'foros',
-        component: ForoListComponent
+        path: 'comentarios',
+        component: ComentarioListComponent
     }
 ];
 
