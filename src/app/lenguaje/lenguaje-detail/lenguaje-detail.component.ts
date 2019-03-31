@@ -1,3 +1,5 @@
+import { ActivatedRoute } from '@angular/router';
+import { LenguajeService } from '../lenguaje.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LenguajeDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private lenguajeService: LenguajeService,
+    private route: ActivatedRoute) { }
+
+  lenguaje_id: number;
 
   ngOnInit() {
+    this.lenguaje_id = +this.route.snapshot.paramMap.get('id');
   }
 
 }
