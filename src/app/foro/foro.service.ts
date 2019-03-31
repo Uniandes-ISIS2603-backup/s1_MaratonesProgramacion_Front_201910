@@ -18,6 +18,14 @@ export class ForoService {
     */
   constructor(private http: HttpClient) { }
 
+/**
+    * Creaa un foro
+    * @param foro El foro que se creará
+    * @returns confirmación de la creación
+    */
+    createForo(foro): Observable<Foro> {
+        return this.http.post<Foro>(API_URL + foros, foro);
+    }
 
   getForos() : Observable<Foro[]>
   {

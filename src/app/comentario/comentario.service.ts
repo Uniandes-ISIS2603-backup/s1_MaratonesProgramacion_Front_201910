@@ -18,6 +18,14 @@ export class ComentarioService {
     */
   constructor(private http: HttpClient) { }
 
+/**
+    * Creaa un comentario
+    * @param comentario El comentario que se creará
+    * @returns confirmación de la creación
+    */
+    createComentario(comentario): Observable<Comentario> {
+        return this.http.post<Comentario>(API_URL + comentarios, comentario);
+    }
 
   getComentarios() : Observable<Comentario[]>
   {
