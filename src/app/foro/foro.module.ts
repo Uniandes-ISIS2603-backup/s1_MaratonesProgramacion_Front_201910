@@ -14,4 +14,4 @@ import { ForoDetailComponent } from './foro-detail/foro-detail.component';
   providers: [ForoService],
   exports: [ForoDetailComponent, ForoListComponent]
 })
-export class SubmissionModule { }
+export class ForoModule { }
