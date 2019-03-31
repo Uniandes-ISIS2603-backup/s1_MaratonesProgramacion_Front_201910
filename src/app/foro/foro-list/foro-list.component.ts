@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Foro} from '../foron';
+import {Foro} from '../foro';
 import {ForoService} from '../foro.service';
 
 @Component({
