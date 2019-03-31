@@ -5,15 +5,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {ActivatedRoute, convertToParamMap} from '@angular/router';
 
 import {AppModule} from '../../app.module';
-import { ForoCreateComponent } from './foro-create.component';
+import { ComentarioCreateComponent } from './comentario-create.component';
 import {AppRoutingModule} from '../../app-routing/app-routing.module';
-import {ForoService} from '../foro.service';
-import {Foro} from '../foro';
+import {ComentarioService} from '../comentario.service';
+import {Comentario} from '../comentario';
 
 
-describe('ForoCreateComponent', () => {
-	let component: ForoCreateComponent;
-	let fixture: ComponentFixture<ForoCreateComponent>;
+describe('ComentarioCreateComponent', () => {
+	let component: ComentarioCreateComponent;
+	let fixture: ComponentFixture<ComentarioCreateComponent>;
     
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -24,7 +24,7 @@ describe('ForoCreateComponent', () => {
                     provide: APP_BASE_HREF,
                     useValue: ''
                 }, 
-                ForoService,
+                ComentarioService,
                 {
                     provide: ActivatedRoute,
                     useValue: {
@@ -38,7 +38,7 @@ describe('ForoCreateComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(ForoCreateComponent);
+        fixture = TestBed.createComponent(ComentarioCreateComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

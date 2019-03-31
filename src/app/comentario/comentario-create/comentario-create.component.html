@@ -4,9 +4,9 @@
         <br>
         <h2 class="text-center">Crea un foro</h2>
         <br>
-        <form name="foro" (ngSubmit)="f.form.valid && createForo()" #f="ngForm" novalidate>
+        <form name="comentario" (ngSubmit)="f.form.valid && createComentario()" #f="ngForm" novalidate>
             <div class="form-group">
-                <label for="foroNombre"><b>Nombre</b></label>
+                <label for="ComentarioNombre"><b>Nombre</b></label>
                 <input type="text" name="editorialName" class="form-control" id="foroNombre" [(ngModel)]="foro.nombre"
                     #foroNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && foroNombre.invalid }" required>
                 <div class="invalid-feedback">

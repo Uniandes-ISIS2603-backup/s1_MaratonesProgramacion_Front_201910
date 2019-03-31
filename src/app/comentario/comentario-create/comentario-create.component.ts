@@ -2,61 +2,61 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 import {ToastrService} from 'ngx-toastr';
 
-import {ForoService} from '../foro.service';
+import {ComentarioService} from '../comentario.service';
 
-import {Foro} from '../foro';
+import {Comentario} from '../comentario';
 
 @Component({
-    selector: 'app-foro-create',
-    templateUrl: './foro-create.component.html',
-    styleUrls: ['./foro-create.component.css']
+    selector: 'app-comentario-create',
+    templateUrl: './comentario-create.component.html',
+    styleUrls: ['./comentario-create.component.css']
 })
-export class ForoCreateComponent implements OnInit {
+export class ComentarioCreateComponent implements OnInit {
 
     /**
     * Constructor for the component
-    * @param foroService The editorials' services provider
+    * @param comentarioService el provedor de servicios
     * @param toastrService The toastr para mostrar mensajes al usuario. 
     */
     constructor(
-        private foroService: ForoService,
+        private comentarioService: ComentarioService,
         private toastrService: ToastrService
     ) {}
 
     /**
-    * El nuevo foro
+    * El nuevo Comentario
     */
-    foro: Foro;
+    comentario: Comentario;
 
     /**
     * The output which tells the parent component
-    * that the user no longer wants to create an editorial
+    * that the user no longer wants to create a Comentario
     */
     @Output() cancel = new EventEmitter();
 
     /**
     * The output which tells the parent component
-    * that the user created a new editorial
+    * that the user created a new Comentario
     */
     @Output() create = new EventEmitter();
 
     /**
-    * crea un nuevo Foro
+    * crea un nuevo Comentario
     */
-    createForo(): Foro {
-        this.foroService.createForo(this.foro)
-            .subscribe((foro) => {
-                this.foro = foro;
+    createComentario(): Comentario {
+        this.comentarioService.createComentario(this.comentario)
+            .subscribe((comentario) => {
+                this.comentario = comentario;
                 this.create.emit();
-                this.toastrService.success("The Foro was created", "Foro creation");
+                this.toastrService.success("The Comentario was created", "Comentario creation");
             }, err => {
                 this.toastrService.error(err, "Error");
             });
-        return this.foro;
+        return this.comentario;
     }
 
     /**
-    * Informs the parent component that the user no longer wants to create a Foro
+    * Informs the parent component that the user no longer wants to create a Comentario
     */
     cancelCreation(): void {
         this.cancel.emit();
@@ -66,6 +66,6 @@ export class ForoCreateComponent implements OnInit {
     * This function will initialize the component
     */
     ngOnInit() {
-        this.foro = new Foro();
+        this.comentario = new Comentario();
     }
 }
