@@ -16,7 +16,7 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
-
+import {InstitucionModule} from './institucion/institucion.module'
 
 
 
@@ -37,6 +37,7 @@ import {SubmissionModule} from './submission/submission.module';
         EjercicioModule,
         LenguajeModule,
         SubmissionModule,
+        InstitucionModule,
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',

@@ -9,6 +9,10 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 
+import { InstitucionListComponent } from '../institucion/institucion-list/institucion-list.component';
+import { InstitucionDetailComponent } from '../institucion/institucion-detail/institucion-detail.component';
+
+
 const routes: Routes = [
 
      {
@@ -33,9 +37,24 @@ const routes: Routes = [
                         only: ['GUEST']
                     }
                 }
-            }
+            },
+             {
+                path: 'instituciones',
+                   children: [{
+                    path: 'list',
+                   component: InstitucionListComponent
+                 },
+                   {
+                 path: ':id',
+                 component: InstitucionDetailComponent,
+                 outlet: 'detail'
+                   }
+                ]
+
+        }
         ]
     },
+    
     {
         path: 'home',
         component: AuthLoginComponent
