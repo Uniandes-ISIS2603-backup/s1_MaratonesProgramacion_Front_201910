@@ -1,35 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import {Submission} from '../submission';
-import {SubmissionService} from '../submission.service';
+import {Foro} from '../foron';
+import {ForoService} from '../foro.service';
 
 @Component({
-  selector: 'app-submission-list',
-  templateUrl: './submission-list.component.html',
-  styleUrls: ['./submission-list.component.css']
+  selector: 'app-foro-list',
+  templateUrl: './foro-list.component.html',
+  styleUrls: ['./foro-list.component.css']
 })
-export class SubmissionListComponent implements OnInit {
+export class ForoListComponent implements OnInit {
 
   
   /** 
   * 
   */
- constructor(private submissionService: SubmissionService) { }
+ constructor(private foroService: ForoService) { }
 
  /** 
- * la lista de submissions 
+ * la lista de foros
  */
- submissions: Submission[];
+ foros: Foro[];
 
  /**
- * Asks the service to update the list of editorials
+ * Le pide al servicio actualizar la lista de foros.
  */
-   getSubmissions(): void {
-     this.submissionService.getSubmissions().subscribe(submissions => this.submissions = submissions);
+   getForos(): void {
+     this.foroService.getForos().subscribe(foros => this.foros = foros);
  }
 
 
  ngOnInit() {
-     this.getSubmissions();
+     this.getForos();
  }
 
 

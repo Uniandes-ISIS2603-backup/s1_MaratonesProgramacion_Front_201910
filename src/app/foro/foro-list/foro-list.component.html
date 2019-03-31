@@ -4,17 +4,24 @@
           <thead class = "thead-dark">
             <tr>
               <th> Id </th>
+              <th> Nombre </th>
+              <th> Descripcion </th>
+              <th> VotosAFavor </th>
+              <th> VotosEnContra </th>
               <th> Fecha </th>
-              <th> Tiempo </th>
-              <th> Veredicto </th>
+              <th> Tags </th>
+              
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor = "let s of submissions">
-              <td> {{s.id }} </td>
-              <td> {{s.fecha}}</td>
-              <td> {{s.tiempo}} </td>
-              <td> {{s.veredicto}} </td>
+            <tr *ngFor = "let f of foros">
+              <td> {{f.id }} </td>
+              <td> {{f.nombre}}</td>
+              <td> {{f.descripcion}} </td>
+              <td> {{f.votosAFavor}} </td>
+              <td> {{f.votosEnContra}} </td>
+              <td> {{f.fecha}} </td>
+              <td> {{f.tags}} </td>
             </tr>
           </tbody>
       </table>

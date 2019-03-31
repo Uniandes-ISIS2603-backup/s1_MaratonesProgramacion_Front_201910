@@ -1,0 +1,19 @@
+[
+    {
+        "id": 100,
+        "name": "Cómo hago para no perder la materia?",
+        "descripcion": "ayudaaaa",
+        "VotosAFavor": 0,
+        "VotosEnContra": 4,
+        "fecha": "2019...",
+        "tags": "#help"
+    }, {
+        "id": 101,
+        "name": "qué es angular?",
+        "descripcion": "angular",
+        "VotosAFavor": 20,
+        "VotosEnContra": 2,
+        "fecha": "2019...",
+        "tags": "#angular"
+    }
+]
