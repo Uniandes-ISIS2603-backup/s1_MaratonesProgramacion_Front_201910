@@ -4,11 +4,13 @@ import { EjercicioDetailComponent } from './ejercicio-detail/ejercicio-detail.co
 import { EjercicioListComponent } from './ejercicio-list/ejercicio-list.component';
 import { EjercicioService } from './ejercicio.service';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   declarations: [EjercicioDetailComponent, EjercicioListComponent],
   providers: [EjercicioService],

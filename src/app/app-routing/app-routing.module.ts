@@ -1,4 +1,7 @@
 import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
+import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
+import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
+import { EjercicioDetailComponent } from './../ejercicio/ejercicio-detail/ejercicio-detail.component';
 import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list.component';
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
@@ -50,16 +53,40 @@ const routes: Routes = [
     }*/
     {
         path: 'ejercicios',
-        component: EjercicioListComponent
+        children:[{
+            path: 'list',
+            component: EjercicioListComponent
+        },
+        {
+            path: ':id',
+            component: EjercicioDetailComponent
+        }
+        ]
     },
     {
         path: 'submissions',
-        component: SubmissionListComponent
+        children:[{
+            path: 'list',
+            component: SubmissionListComponent
+        },
+        {
+            path: ':id',
+            component: SubmissionDetailComponent
+        }
+        ]
     },
     {
 
         path: 'lenguajes',
-        component: LenguajeListComponent
+        children:[{
+            path: 'list',
+            component: LenguajeListComponent
+        },
+        {
+            path: ':id',
+            component: LenguajeDetailComponent
+        }
+        ]
     },
     {
         path: 'competencias',
@@ -75,7 +102,6 @@ const routes: Routes = [
     {
         path: 'comentarios',
         component: ComentarioListComponent
-
     }
 ];
 
