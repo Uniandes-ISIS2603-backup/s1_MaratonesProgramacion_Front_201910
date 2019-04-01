@@ -17,7 +17,12 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
+<<<<<<< HEAD
 import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
+=======
+import {ForoModule} from './foro/foro.module';
+import {ComentarioModule} from './comentario/comentario.module';
+>>>>>>> 3141592fc53461de37de01ad780079c4e178f713
 
 
 
@@ -39,8 +44,13 @@ import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.modu
         EjercicioModule,
         LenguajeModule,
         SubmissionModule,
+<<<<<<< HEAD
         CompetenciaModule,
         LugarCompetenciaModule,
+=======
+        ForoModule,
+        ComentarioModule,
+>>>>>>> 3141592fc53461de37de01ad780079c4e178f713
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',
