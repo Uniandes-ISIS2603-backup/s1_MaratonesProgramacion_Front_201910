@@ -1,3 +1,4 @@
+import { CompetenciaModule } from './competencia/competencia.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -16,6 +17,10 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
+import {LugarCompetenciaModule} from './LugarCompetencia/LugarCompetencia.module';
+import {ForoModule} from './foro/foro.module';
+import {ComentarioModule} from './comentario/comentario.module';
+
 
 
 
@@ -37,6 +42,10 @@ import {SubmissionModule} from './submission/submission.module';
         EjercicioModule,
         LenguajeModule,
         SubmissionModule,
+        CompetenciaModule,
+        LugarCompetenciaModule,
+        ForoModule,
+        ComentarioModule,
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',
