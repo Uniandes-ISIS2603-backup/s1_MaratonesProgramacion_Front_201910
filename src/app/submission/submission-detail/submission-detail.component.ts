@@ -26,7 +26,7 @@ export class SubmissionDetailComponent implements OnInit {
 
 
       /**
-    * The method which retrieves the books of an editorial
+    * The method which retrieves the submissions
     */
    getSubmissionDetail(): void {
     this.submissionService.getSubmissionDetail(this.submission_id)
