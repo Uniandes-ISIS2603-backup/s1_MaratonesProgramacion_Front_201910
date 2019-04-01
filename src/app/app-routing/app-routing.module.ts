@@ -1,3 +1,4 @@
+import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list.component';
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
@@ -10,6 +11,7 @@ import {NgxPermissionsGuard} from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
 
 const routes: Routes = [
 
@@ -55,12 +57,25 @@ const routes: Routes = [
         component: SubmissionListComponent
     },
     {
+
+        path: 'lenguajes',
+        component: LenguajeListComponent
+    },
+    {
+        path: 'competencias',
+        component: CompetenciaListComponent
+    },
+    {
+        path: 'lugaresCompetencia',
+        component: LugarCompetenciaListComponent
+
         path: 'foros',
         component: ForoListComponent
     },
     {
         path: 'comentarios',
         component: ComentarioListComponent
+
     }
 ];
 
