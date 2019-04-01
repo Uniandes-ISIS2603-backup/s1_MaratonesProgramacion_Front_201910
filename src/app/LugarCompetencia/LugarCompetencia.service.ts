@@ -1,4 +1,5 @@
-import { LugarCompetenciaDetailComponent } from './lugarCompetencia-detail/lugarCompetencia-detail.component';
+import { LugarCompetenciaDetail } from './lugarCompetenciaDetail';
+
 import { LugarCompetencia } from './lugarCompetencia';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -19,10 +20,16 @@ constructor(private http: HttpClient) { }
 
 /**
 * Crea un lugarCompetencia
-* @param lugarCompetencia The new author
-* @returns The confirmation that the author was created
+* @param lugarCompetencia El nuevo lugarCompetencia
+* @returns Confirmacion de que se creo el lugarCompetencia
 */
 createLugarCompetencia(lugarCompetencia): Observable<LugarCompetencia> {
     return this.http.post<LugarCompetencia>(API_URL + lugaresCompetencia, lugarCompetencia);
 }
+
+getLugarCompetenciaDetail(lugarCompetenciaId): Observable<LugarCompetenciaDetail> {
+  return this.http.get<LugarCompetenciaDetail>(API_URL + lugaresCompetencia + '/' + lugarCompetenciaId);
+}
+
+
 }
