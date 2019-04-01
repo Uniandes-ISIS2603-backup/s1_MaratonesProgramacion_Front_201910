@@ -5,8 +5,8 @@ import {Submission} from './submission';
 import { SubmissionDetail } from './submission-detail';
 
 
-const API_URL = "http://localhost:8080/s1_maratones-api/";
-const submissions = '/submissions';
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
+const submissions = 'submissions';
 
 @Injectable({
   providedIn: 'root'

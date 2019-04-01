@@ -1,10 +1,7 @@
+import { Submission } from "./submission";
 
-export class SubmissionDetail{
-
-
-
+export class SubmissionDetail extends Submission{
 
 
 
-    
 }

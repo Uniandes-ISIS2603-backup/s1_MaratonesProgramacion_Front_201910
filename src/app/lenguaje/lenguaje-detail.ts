@@ -1,10 +1,7 @@
+import { Lenguaje } from './lenguaje';
 
 
-export class LenguajeDetail{
+export class LenguajeDetail extends Lenguaje{
 
 
-
-
-
-    
 }

@@ -10,7 +10,8 @@
         </thead>
         <tbody>
           <tr *ngFor = "let ejercicio of ejercicios">
-            <td> {{ejercicio.nombre }} </td>
+            <td style= "cursor:pointer;"> 
+              <dd class = "figure-caption" routerLink = "/ejercicios/{{ejercicio.id}}">{{ejercicio.nombre}} </dd></td>
             <td> {{ejercicio.puntaje}}</td>
             <td> {{ejercicio.nivel}} </td>
           </tr>

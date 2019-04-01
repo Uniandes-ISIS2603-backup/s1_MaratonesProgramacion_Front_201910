@@ -5,8 +5,8 @@ import {Lenguaje} from './lenguaje';
 import { LenguajeDetail } from './lenguaje-detail';
 
 
-const API_URL = "http://localhost:8080/s1_maratones-api/";
-const lenguajes = '/lenguajes';
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
+const lenguajes = 'lenguajes';
 
 @Injectable({
   providedIn: 'root'

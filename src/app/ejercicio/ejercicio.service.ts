@@ -5,8 +5,8 @@ import {Ejercicio} from './ejercicio';
 import { EjercicioDetail } from './ejercicio-detail';
 
 
-const API_URL = "http://localhost:8080/s1_maratones-api";
-const ejercicios = '/ejercicios';
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
+const ejercicios = 'ejercicios';
 
 @Injectable({
   providedIn: 'root'
