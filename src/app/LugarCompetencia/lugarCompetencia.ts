@@ -1,4 +1,4 @@
-export interface LugarCompetencia 
+export class LugarCompetencia 
 {
     id: number;
 
