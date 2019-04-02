@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { EquipoDetailComponent } from './equipo-detail.component';
+import { UsuarioEditComponent } from './usuario-edit.component';
 
-describe('EquipoDetailComponent', () => {
-  let component: EquipoDetailComponent;
-  let fixture: ComponentFixture<EquipoDetailComponent>;
+describe('UsuarioEditComponent', () => {
+  let component: UsuarioEditComponent;
+  let fixture: ComponentFixture<UsuarioEditComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EquipoDetailComponent ]
+      declarations: [ UsuarioEditComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EquipoDetailComponent);
+    fixture = TestBed.createComponent(UsuarioEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -25,5 +25,4 @@ describe('EquipoDetailComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
 });
