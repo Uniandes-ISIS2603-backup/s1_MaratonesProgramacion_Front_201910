@@ -18,6 +18,7 @@ import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
+import {UsuarioModule} from './usuario/usuario.module';
 
 
 
@@ -39,6 +40,7 @@ import {ComentarioModule} from './comentario/comentario.module';
         EjercicioModule,
         LenguajeModule,
         SubmissionModule,
+        UsuarioModule,
         ForoModule,
         ComentarioModule,
         ToastrModule.forRoot({
