@@ -1,18 +1,22 @@
+
+
 import { Component, OnInit, OnDestroy, ViewChild,ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import {ModalDialogService, SimpleModalComponent} from 'ngx-modal-dialog';
-import { Usuario } from '../usuario';
-import { UsuarioService } from '../usuario.service';
+import { Equipo } from '../equipo';
+import { EquipoService } from '../equipo.service';
+
+
 
 @Component({
-  selector: 'app-usuario-detail',
-  templateUrl: './usuario-detail.component.html',
-  styleUrls: ['./usuario-detail.component.css']
+  selector: 'app-equipo-detail',
+  templateUrl: './equipo-detail.component.html',
+  styleUrls: ['./equipo-detail.component.css']
 })
-export class UsuarioDetailComponent implements OnInit {
+export class EquipoDetailComponent implements OnInit {
 
-  constructor(private usuarioService: UsuarioService,
+  constructor(private equipoService: EquipoService,
     private route: ActivatedRoute,
     private router: Router,
     private toastrService: ToastrService,    
@@ -29,14 +33,14 @@ export class UsuarioDetailComponent implements OnInit {
     }
 
     /**
-    * The usuario's id retrieved from the address
+    * The equipo's id retrieved from the address
     */
-    usuario_id: number;
+    equipo_id: number;
   
     /**
-   * The usuario whose details are shown
+   * The equipo whose details are shown
    */
-    usuario: Usuario;
+    equipo: Equipo;
   /**
    * The suscription which helps to know when a new user
    * needs to be loaded
@@ -44,14 +48,14 @@ export class UsuarioDetailComponent implements OnInit {
     navigationSubscription;
   
     /**
-    * The method which retrieves the details of the usuario that
+    * The method which retrieves the details of the equipo that
     * we want to show
-    * @returns The usuario with its information (details)
+    * @returns The equipo with its information (details)
     */
-    getUsuario(): void {
-      this.usuarioService.getUsuario(this.usuario_id)
-        .subscribe(usuario => {
-            this.usuario = usuario;
+    getEquipo(): void {
+      this.equipoService.getEquipo(this.equipo_id)
+        .subscribe(equipo => {
+            this.equipo = equipo;
         }, err => {
             this.toastrService.error(err, "Error");
       });
@@ -65,16 +69,16 @@ export class UsuarioDetailComponent implements OnInit {
     * they are never considered undefined
     */
  ngOnInit() {
-  this.usuario_id = +this.route.snapshot.paramMap.get('id');
-  this.usuario = new Usuario();
-  this.getUsuario();
+  this.equipo_id = +this.route.snapshot.paramMap.get('id');
+  this.equipo = new Equipo();
+  this.getEquipo();
   //this.getAllClientes();    
 }
 
 
 
 /**
-* This method helps to refresh the view when we need to load another usuario into it
+* This method helps to refresh the view when we need to load another equipo into it
 * when one of the other clients in the list is clicked
 */
 ngOnDestroy() {

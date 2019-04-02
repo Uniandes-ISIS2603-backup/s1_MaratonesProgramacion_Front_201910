@@ -24,5 +24,12 @@ getEquipos() : Observable<Equipo[]>
     return this.http.get<Equipo[]>(API_URL + equipos);
   }
 
+  /**
+  * Returns the Observable object with the details of a client retrieved from the API
+  * @returns The user details
+  */
+ getEquipo(equipo_id): Observable<Equipo> {
+  return this.http.get<Equipo>(API_URL + equipos + '/' + equipo_id);
+}
 
 }
