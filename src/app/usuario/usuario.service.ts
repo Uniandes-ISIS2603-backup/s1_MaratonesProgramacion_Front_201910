@@ -24,5 +24,11 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(API_URL + usuarios);
   }
 
-
+  /**
+  * Returns the Observable object with the details of a client retrieved from the API
+  * @returns The user details
+  */
+ getUsuario(usuario_id): Observable<Usuario> {
+  return this.http.get<Usuario>(API_URL + usuarios + '/' + usuario_id);
+}
 }
