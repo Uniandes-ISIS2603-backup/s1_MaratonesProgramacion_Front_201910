@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import {Usuario} from './usuario';
+import {Submission} from './submission';
 
 
-const API_URL = "http://localhost:8080/s1_maratones-api";
-const usuarios = '/usuarios';
+const API_URL = "http://localhost:8080/s1_maratones-api/";
+const submissions = '/submissions';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsuarioService {
+export class SubmissionService {
 
   /**
     * Constructor of the service
@@ -19,9 +19,9 @@ export class UsuarioService {
   constructor(private http: HttpClient) { }
 
 
-  getUsuarios() : Observable<Usuario[]>
+  getSubmissions() : Observable<Submission[]>
   {
-    return this.http.get<Usuario[]>(API_URL + usuarios);
+    return this.http.get<Submission[]>(API_URL + submissions);
   }
 
 

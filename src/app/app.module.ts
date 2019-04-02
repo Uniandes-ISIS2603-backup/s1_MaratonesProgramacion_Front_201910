@@ -13,36 +13,52 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-import { UsuarioModule } from './usuario/usuario.module';
+import {LenguajeModule} from './lenguaje/lenguaje.module';
+import {EjercicioModule} from './ejercicio/ejercicio.module';
+import {SubmissionModule} from './submission/submission.module';
+import {ForoModule} from './foro/foro.module';
+import {ComentarioModule} from './comentario/comentario.module';
+import {UsuarioModule} from './usuario/usuario.module';
+
+
+
 
 
 
 @NgModule({
-   declarations: [
-      AppComponent
-   ],
-   imports: [
-       BrowserModule,
-       AppRoutingModule,
-       HttpClientModule,
-       BrowserAnimationsModule,
-       UsuarioModule,
-       FormsModule,
-       ToastrModule.forRoot({
-           timeOut: 10000,
-           positionClass: 'toast-bottom-right',
-           preventDuplicates: true,
-       }),
-       NgxPaginationModule,
-       NgbModule,
-   ],
-   bootstrap: [AppComponent],
-   providers: [
-       {
-           provide: HTTP_INTERCEPTORS,
-           useClass: HttpErrorInterceptor,
-           multi: true
-       }
-   ]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        ModalDialogModule.forRoot(),
+        AuthModule,
+        FormsModule,
+        EjercicioModule,
+        LenguajeModule,
+        SubmissionModule,
+        UsuarioModule,
+        ForoModule,
+        ComentarioModule,
+        ToastrModule.forRoot({
+            timeOut: 10000,
+            positionClass: 'toast-bottom-right',
+            preventDuplicates: true,
+        }),
+        NgxPaginationModule,
+        NgxPermissionsModule.forRoot(),
+        NgbModule
+    ],
+    bootstrap: [AppComponent],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: HttpErrorInterceptor,
+            multi: true
+        }
+    ]
 })
-export class AppModule { }
+export class AppModule {}
