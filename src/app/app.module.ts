@@ -19,9 +19,7 @@ import {SubmissionModule} from './submission/submission.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
 import {UsuarioModule} from './usuario/usuario.module';
-
-
-
+import {EquipoModule} from './equipo/equipo.module';
 
 
 
@@ -42,6 +40,7 @@ import {UsuarioModule} from './usuario/usuario.module';
         SubmissionModule,
         UsuarioModule,
         ForoModule,
+        EquipoModule,
         ComentarioModule,
         ToastrModule.forRoot({
             timeOut: 10000,

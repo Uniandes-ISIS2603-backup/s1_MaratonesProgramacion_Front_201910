@@ -1,0 +1,22 @@
+<div class = "container fluid">
+  <div class = "col-md-12">
+    <table class = "table table striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th> id </th>
+
+            <th> nombreEquipo </th>
+            <th>  </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let equipo of equipos">
+            <td> {{equipo.id}}</td>
+
+            <td> {{equipo.nombreEquipo}}</td>
+            
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
