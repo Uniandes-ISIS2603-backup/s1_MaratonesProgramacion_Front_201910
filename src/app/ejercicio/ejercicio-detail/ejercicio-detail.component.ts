@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {EjercicioService} from '../ejercicio.service';
+import { ActivatedRoute } from '@angular/router';
+import { EjercicioDetail } from '../ejercicio-detail';
 
 @Component({
   selector: 'app-ejercicio-detail',
@@ -7,9 +10,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EjercicioDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private ejercicioService: EjercicioService,
+    private route: ActivatedRoute) { }
+
+  ejercicio_id: number;
+
+  ejercicioDetail: EjercicioDetail;
 
   ngOnInit() {
+    this.ejercicio_id = +this.route.snapshot.paramMap.get('id');
+    
+    this.ejercicioDetail = new EjercicioDetail();
+    this.getEjercicioDetail();
   }
 
+
+  getEjercicioDetail(): void {
+    this.ejercicioService.getEjerciciosDetail(this.ejercicio_id)
+        .subscribe(ejerDetail => {
+            this.ejercicioDetail = ejerDetail
+        });
+  }
+
+  
 }
