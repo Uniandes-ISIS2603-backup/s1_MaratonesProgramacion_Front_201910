@@ -9,16 +9,13 @@
 
             </tr>
           </thead>
-          <body>
+          <tbody>
             <tr *ngFor= "let l of lugaresCompetencia">
-              <td >
-                  {{l.id}}
-                  {{l.fecha}},
-                  {{l.ubicacion}}
-              </td>
-
+              <td >{{l.id}}</td>
+              <td> {{l.fecha}}</td>
+              <td>{{l.ubicacion}}</td>
             </tr>
-          </body>
+          </tbody>
       </table>
   </div>
 </div>

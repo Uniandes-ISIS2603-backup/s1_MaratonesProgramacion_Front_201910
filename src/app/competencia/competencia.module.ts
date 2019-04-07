@@ -4,13 +4,19 @@ import { CommonModule } from '@angular/common';
 import { CompetenciaComponent } from './competencia.component';
 import { FormsModule } from '@angular/forms';
 import { CompetenciaService } from './competencia.service';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from '../app-routing/app-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
-  declarations: [CompetenciaListComponent],
+  declarations: [CompetenciaListComponent, CompetenciaComponent],
   providers:[CompetenciaService],
   exports: [CompetenciaListComponent]
 

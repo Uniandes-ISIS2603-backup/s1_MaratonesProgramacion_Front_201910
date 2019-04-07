@@ -103,11 +103,17 @@ const routes: Routes = [
     },
     {
         path: 'competencias',
-        component: CompetenciaListComponent
+        children: [{
+            path: 'list',
+            component: CompetenciaListComponent
+        }]
     },
     {
-        path: 'lugaresCompetencia',
-        component: LugarCompetenciaListComponent
+        path: 'lugares',
+        children: [{
+            path: 'list',
+            component: LugarCompetenciaListComponent
+        }]
 
     },
     {
@@ -117,7 +123,8 @@ const routes: Routes = [
     {
         path: 'comentarios',
         component: ComentarioListComponent
-    }
+    },
+
 ];
 
 @NgModule({
