@@ -96,6 +96,8 @@ const routes: Routes = [
         path: 'lugaresCompetencia',
         component: LugarCompetenciaListComponent
 
+    },
+    {
         path: 'foros',
         component: ForoListComponent
     },
