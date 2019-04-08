@@ -10,8 +10,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     FormsModule
   ],
-  declarations: [LugarCompetenciaListComponent],
+  declarations: [LugarCompetenciaListComponent,LugarCompetenciaComponent],
   providers: [LugarCompetenciaService],
-  exports: [LugarCompetenciaListComponent]
+  exports: [LugarCompetenciaListComponent,LugarCompetenciaComponent]
 })
 export class LugarCompetenciaModule { }
