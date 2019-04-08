@@ -1,3 +1,4 @@
+import { LenguajeCreateComponent } from './lenguaje-create/lenguaje-create.component';
 import { LenguajeService } from './lenguaje.service';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -12,9 +13,9 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ],
-  declarations: [LenguajeListComponent, LenguajeDetailComponent],
+  declarations: [LenguajeListComponent, LenguajeDetailComponent, LenguajeCreateComponent],
   providers: [LenguajeService],
-  exports: [LenguajeListComponent, LenguajeDetailComponent]
+  exports: [LenguajeListComponent, LenguajeDetailComponent, LenguajeCreateComponent]
   
 })
 export class LenguajeModule { }
