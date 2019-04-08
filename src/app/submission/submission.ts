@@ -1,8 +1,14 @@
+import { Ejercicio } from './../ejercicio/ejercicio';
 
 /*
 *Esta clase contiene toda la infromacion pertinente para una submission
 */
-
+/**
+ *
+ *
+ * @export
+ * @class Submission
+ */
 export class Submission
 {
 
@@ -41,8 +47,13 @@ export class Submission
     */
     codigo: string;
 
-
-
+    /**
+     *
+     *Ejercicio al que fue enviado
+     * @type {Ejercicio}
+     * @memberof Submission
+     */
+    ejercicio: Ejercicio;
 
 
 }

@@ -5,8 +5,8 @@ import {Usuario} from './usuario';
 
 
 const API_URL = "http://localhost:8080/s1_maratones-api";
-const usuarios = '/usuarios';
-
+const usuarios = 'usuarios.json';
+const usuario = 'usuario-';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,11 +24,16 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(API_URL + usuarios);
   }
 
-  /**
-  * Returns the Observable object with the details of a client retrieved from the API
-  * @returns The user details
-  */
-  getUsuario(usuario_id): Observable<Usuario> {
-  return this.http.get<Usuario>(API_URL + usuarios + '/' + usuario_id);
+
+
+  getUsuarioPorId(usuarioId: number): Observable<Usuario>
+  {
+    return this.http.get<Usuario>(API_URL + usuario + usuarioId + '.json');
   }
+
+  postUsuario(usuario: Usuario):void
+  {
+    console.log(usuario);
+  }
+
 }

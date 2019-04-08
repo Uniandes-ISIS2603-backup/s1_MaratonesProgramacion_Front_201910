@@ -1,3 +1,7 @@
+import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
+import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
+import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
+import { EjercicioDetailComponent } from './../ejercicio/ejercicio-detail/ejercicio-detail.component';
 import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list.component';
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
@@ -7,9 +11,11 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
-
+import {UsuarioListComponent} from '../usuario/usuario-list/usuario-list.component';
+import {UsuarioDetailComponent} from '../usuario/usuario-detail/usuario-detail.component';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
 
 const routes: Routes = [
 
@@ -48,11 +54,62 @@ const routes: Routes = [
     }*/
     {
         path: 'ejercicios',
-        component: EjercicioListComponent
+        children:[{
+            path: 'list',
+            component: EjercicioListComponent
+        },
+        {
+            path: ':id',
+            component: EjercicioDetailComponent
+        }
+        ]
     },
     {
+        path: 'Usuarios',
+        children: [
+          {
+            path: 'list',
+            component: UsuarioListComponent
+          },
+          {
+            path: ':id',
+            component: UsuarioDetailComponent
+          }
+        ]
+    }
+    {
         path: 'submissions',
-        component: SubmissionListComponent
+        children:[{
+            path: 'list',
+            component: SubmissionListComponent
+        },
+        {
+            path: ':id',
+            component: SubmissionDetailComponent
+        }
+        ]
+    },
+    {
+
+        path: 'lenguajes',
+        children:[{
+            path: 'list',
+            component: LenguajeListComponent
+        },
+        {
+            path: ':id',
+            component: LenguajeDetailComponent
+        }
+        ]
+    },
+    {
+        path: 'competencias',
+        component: CompetenciaListComponent
+    },
+    {
+        path: 'lugaresCompetencia',
+        component: LugarCompetenciaListComponent
+
     },
     {
         path: 'foros',

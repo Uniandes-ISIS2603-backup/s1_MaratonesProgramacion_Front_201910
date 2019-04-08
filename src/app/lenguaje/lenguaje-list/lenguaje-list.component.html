@@ -9,7 +9,8 @@
           </thead>
           <tbody>
             <tr *ngFor = "let l of lenguajes">
-              <td> {{l.nombre }} </td>
+              <td style= "cursor:pointer;"> 
+                <dd class = "figure-caption" routerLink = "/lenguajes/{{l.id}}">{{l.nombre}} </dd></td>
               <td> {{l.experiencia}}</td>
             </tr>
           </tbody>

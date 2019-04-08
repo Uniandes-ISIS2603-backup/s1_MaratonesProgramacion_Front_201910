@@ -3,7 +3,7 @@ import {Usuario} from '../usuario';
 import {UsuarioService} from '../usuario.service';
 
 @Component({
-  selector: 'app-listar-usuarios',
+  selector: 'app-usuario-list',
   templateUrl: './usuario-list.component.html',
   styleUrls: ['./usuario-list.component.css']
 })

@@ -1,3 +1,4 @@
+import { CompetenciaModule } from './competencia/competencia.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -16,10 +17,15 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
+import {LugarCompetenciaModule} from './LugarCompetencia/LugarCompetencia.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
 import {UsuarioModule} from './usuario/usuario.module';
-import {EquipoModule} from './equipo/equipo.module';
+import { UsuarioService } from './usuario/usuario.service';
+
+
+
+
 
 
 
@@ -32,15 +38,16 @@ import {EquipoModule} from './equipo/equipo.module';
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        UsuarioModule,
         ModalDialogModule.forRoot(),
         AuthModule,
         FormsModule,
         EjercicioModule,
         LenguajeModule,
         SubmissionModule,
-        UsuarioModule,
+        CompetenciaModule,
+        LugarCompetenciaModule,
         ForoModule,
-        EquipoModule,
         ComentarioModule,
         ToastrModule.forRoot({
             timeOut: 10000,
@@ -58,6 +65,5 @@ import {EquipoModule} from './equipo/equipo.module';
             useClass: HttpErrorInterceptor,
             multi: true
         }
-    ]
 })
 export class AppModule {}
