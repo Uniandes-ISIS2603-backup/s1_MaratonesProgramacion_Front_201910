@@ -6,7 +6,9 @@ import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
 import { ForoListComponent } from './../foro/foro-list/foro-list.component';
+import { ForoDetailComponent } from './../foro/foro-detail/foro-detail.component';
 import { ComentarioListComponent } from './../comentario/comentario-list/comentario-list.component';
+import { ComentarioDetailComponent } from './../comentario/comentario-detail/comentario-detail.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
@@ -99,11 +101,27 @@ const routes: Routes = [
     },
     {
         path: 'foros',
-        component: ForoListComponent
+        children:[{
+            path: 'list',
+            component: ForoListComponent
+        },
+        {
+            path: ':id',
+            component: ForoDetailComponent
+        }
+        ]
     },
     {
         path: 'comentarios',
-        component: ComentarioListComponent
+        children:[{
+            path: 'list',
+            component: ComentarioListComponent
+        },
+        {
+            path: ':id',
+            component: ComentarioDetailComponent
+        }
+        ]
     }
 ];
 
