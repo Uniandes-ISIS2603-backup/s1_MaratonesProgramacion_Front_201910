@@ -39,4 +39,9 @@ export class Foro
      * descripción del foro
     */
     descripcion: string;
+
+    /**
+    * Los comentarios del foro
+    */
+    comentarios: Comentario[];
 }
