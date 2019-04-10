@@ -1,4 +1,3 @@
-import { UsuarioListComponent } from './../usuario/usuario-list/usuario-list.component';
 import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
 import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
@@ -8,9 +7,6 @@ import { SubmissionListComponent } from './../submission/submission-list/submiss
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
 import { ForoListComponent } from './../foro/foro-list/foro-list.component';
 import { ComentarioListComponent } from './../comentario/comentario-list/comentario-list.component';
-import { UsuarioDetailComponent } from './../usuario/usuario-detail/usuario-detail.component';
-import { UsuarioCreateComponent } from './../usuario/usuario-create/usuario-create.component';
-
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
@@ -67,22 +63,7 @@ const routes: Routes = [
         }
         ]
     },
-    {
-        path: 'usuarios',
-        children:[{
-            path: 'list',
-            component: UsuarioListComponent
-        },
-        {
-            path: ':id',
-            component: UsuarioDetailComponent
-        },
-        {
-            path: ':create',
-            component: UsuarioCreateComponent
-        }
-        ]
-    },
+    
     {
         path: 'submissions',
         children:[{
