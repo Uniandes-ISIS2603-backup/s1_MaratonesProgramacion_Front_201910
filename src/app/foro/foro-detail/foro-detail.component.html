@@ -3,5 +3,7 @@
       <p class="h4 p-3">Foro: {{foroDetail.nombre}}</p>
       <p>Descripción: {{foroDetail.descripcion}}</p>
       <p>fecha de creación: {{foroDetail.fecha}}</p>
+      <p class="h4 p-3">comentarios: </p>
+      <app-comentario-list [comentarios]="foroDetail.comentarios"></app-comentario-list>
       </div>
   </div>

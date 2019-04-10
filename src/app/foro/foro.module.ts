@@ -15,7 +15,6 @@ import { ForoCreateComponent } from './foro-create/foro-create.component';
 @NgModule({
   imports: [
         BrowserModule,
-        AppRoutingModule,
         HttpClientModule,
         CommonModule,
         FormsModule,

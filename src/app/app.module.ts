@@ -33,7 +33,7 @@ import {ComentarioModule} from './comentario/comentario.module';
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule,
+
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
@@ -53,7 +53,8 @@ import {ComentarioModule} from './comentario/comentario.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        AppRoutingModule
     ],
     bootstrap: [AppComponent],
     providers: [
