@@ -7,13 +7,14 @@
           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
           <small>Donec id elit non mi porta.</small>
         </a>
-        <button type="button" class="list-group-item list-group-item-action list-group-item" *ngFor = "let f of foros" routerLink = "/foros/{{foro.id}}">
+        <a href="#" class="list-group-item list-group-item-action" *ngFor = "let f of foros" routerLink = "/foros/{{f.id}}">
+          
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{f.nombre}}</h5>
             <small class="text-muted">{{f.fecha}}</small>
           </div>
           <p class="mb-1">{{f.descripcion}}</p>
           <small class="text-muted">Donec id elit non mi porta.</small>
-        </button>
+        </a>
       </div>
       
