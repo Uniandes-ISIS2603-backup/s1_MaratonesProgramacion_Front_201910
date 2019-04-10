@@ -21,19 +21,13 @@ import {LugarCompetenciaModule} from './LugarCompetencia/LugarCompetencia.module
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
 
-
-
-
-
-
-
 @NgModule({
     declarations: [
         AppComponent
     ],
     imports: [
         BrowserModule,
-
+        AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
@@ -53,8 +47,7 @@ import {ComentarioModule} from './comentario/comentario.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule,
-        AppRoutingModule
+        NgbModule
     ],
     bootstrap: [AppComponent],
     providers: [
