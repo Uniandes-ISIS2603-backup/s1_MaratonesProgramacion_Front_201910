@@ -1,4 +1,5 @@
 import { CompetenciaListComponent } from './../competencia/competenciaList/competenciaList.component';
+import {CompetenciaDetailComponent} from './../competencia/competencia-detail/competencia-detail.component';
 import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
 import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
@@ -106,7 +107,11 @@ const routes: Routes = [
         children: [{
             path: 'list',
             component: CompetenciaListComponent
-        }]
+        },
+    {
+        path: ':id',
+        component: CompetenciaDetailComponent   
+    }]
     },
     {
         path: 'lugares',

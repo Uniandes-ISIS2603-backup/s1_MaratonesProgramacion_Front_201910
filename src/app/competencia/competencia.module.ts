@@ -7,6 +7,7 @@ import { CompetenciaService } from './competencia.service';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from '../app-routing/app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+import { CompetenciaDetailComponent} from './competencia-detail/competencia-detail.component';
 
 @NgModule({
   imports: [
@@ -16,9 +17,9 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule
   ],
-  declarations: [CompetenciaListComponent, CompetenciaComponent],
+  declarations: [CompetenciaListComponent, CompetenciaComponent, CompetenciaDetailComponent],
   providers:[CompetenciaService],
-  exports: [CompetenciaListComponent]
+  exports: [CompetenciaListComponent,CompetenciaComponent, CompetenciaDetailComponent]
 
 })
 
