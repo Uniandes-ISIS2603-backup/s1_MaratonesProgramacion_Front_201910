@@ -6,7 +6,7 @@ import {ForoDetail} from './foro-detail';
 
 
 const API_URL = "http://localhost:8080/s1_maratones-api/";
-const foros = '/foros';
+const foros = 'foros';
 
 @Injectable({
   providedIn: 'root'
