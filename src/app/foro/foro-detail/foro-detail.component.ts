@@ -1,11 +1,7 @@
-import {Component, OnInit, OnDestroy, ViewChild, ViewContainerRef} from '@angular/core';
-import {ModalDialogService, SimpleModalComponent} from 'ngx-modal-dialog';
-import {ToastrService} from 'ngx-toastr';
-import { ActivatedRoute } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 import {ForoService} from '../foro.service';
-import {Foro} from '../foro';
-import {ForoDetail} from './foro-detail';
+import { ActivatedRoute } from '@angular/router';
+import { ForoDetail } from '../foro-detail';
 
 @Component({
   selector: 'app-foro-detail',
@@ -16,10 +12,7 @@ export class ForoDetailComponent implements OnInit{
 
   constructor(
         private foroService: ForoService,
-        private route: ActivatedRoute,
-        private modalDialogService: ModalDialogService,
-        private viewRef: ViewContainerRef,
-        private toastrService: ToastrService) { }
+        private route: ActivatedRoute) { }
 
         foro_id: number;
 
@@ -29,13 +22,14 @@ export class ForoDetailComponent implements OnInit{
     this.foro_id = +this.route.snapshot.paramMap.get('id');
     
     this.foroDetail = new ForoDetail();
-    this.getForosDetail();
+    this.getForoDetail();
   }
 
-  getForosDetail(): void {
+  getForoDetail(): void {
     this.foroService.getForosDetail(this.foro_id)
         .subscribe(ejerDetail => {
             this.foroDetail = ejerDetail
         });
+  }
 
 }
