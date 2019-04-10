@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Foro} from './foro';
+import {ForoDetail} from './foro-detail';
 
 
 const API_URL = "http://localhost:8080/s1_maratones-api/";
@@ -32,7 +33,7 @@ export class ForoService {
     return this.http.get<Foro[]>(API_URL + foros);
   }
 
-    getForoDetail(foroId): Observable<ForoDetail> {
+    getForosDetail(foroId): Observable<ForoDetail> {
         return this.http.get<ForoDetail>(API_URL + foros + '/' + foroId);
     }
 

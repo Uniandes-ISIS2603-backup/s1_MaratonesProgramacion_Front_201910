@@ -25,6 +25,6 @@ import { ForoCreateComponent } from './foro-create/foro-create.component';
   ],
   declarations: [ForoListComponent, ForoDetailComponent, ForoCreateComponent],
   providers: [ForoService],
-  exports: [ForoDetailComponent, ForoListComponent]
+  exports: [ForoDetailComponent, ForoListComponent, ForoCreateComponent]
 })
 export class ForoModule { }
