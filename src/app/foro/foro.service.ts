@@ -2,10 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Foro} from './foro';
+import {ForoDetail} from './foro-detail';
 
 
-const API_URL = "http://localhost:8080/s1_maratones-api/";
-const foros = '/foros';
+const API_URL = "../../assets/";
+const foros = '/foros.json';
 
 @Injectable({
   providedIn: 'root'
@@ -31,6 +32,10 @@ export class ForoService {
   {
     return this.http.get<Foro[]>(API_URL + foros);
   }
+
+    getForosDetail(foroId): Observable<ForoDetail> {
+        return this.http.get<ForoDetail>(API_URL + foros + '/' + foroId);
+    }
 
 
 }

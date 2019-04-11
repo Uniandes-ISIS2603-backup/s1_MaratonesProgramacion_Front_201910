@@ -9,16 +9,12 @@ import {ForoService} from '../foro.service';
 })
 export class ForoListComponent implements OnInit {
 
-  
-  /** 
-  * 
-  */
  constructor(private foroService: ForoService) { }
 
- /** 
+    /** 
  * la lista de foros
  */
- foros: Foro[];
+foros: Foro[];
 
  /**
  * Le pide al servicio actualizar la lista de foros.
