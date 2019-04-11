@@ -1,3 +1,5 @@
+import { EquipoModule } from './equipo/equipo.module';
+import { UsuarioModule } from './usuario/usuario.module';
 import { CompetenciaModule } from './competencia/competencia.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -29,6 +31,8 @@ import {ComentarioModule} from './comentario/comentario.module';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        UsuarioModule,
+        EquipoModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         AuthModule,
