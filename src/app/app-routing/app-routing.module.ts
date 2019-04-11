@@ -1,3 +1,7 @@
+import { EquipoDetailComponent } from './../equipo/equipo-detail/equipo-detail.component';
+import { EquipoListComponent } from './../equipo/equipo-list/equipo-list.component';
+import { UsuarioCreateComponent } from './../usuario/usuario-create/usuario-create.component';
+import { UsuarioListComponent } from './../usuario/usuario-list/usuario-list.component';
 import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
 import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
@@ -11,10 +15,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
-
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
+import { UsuarioDetailComponent } from '../usuario/usuario-detail/usuario-detail.component';
 
 const routes: Routes = [
 
@@ -87,6 +91,37 @@ const routes: Routes = [
             path: ':id',
             component: LenguajeDetailComponent
         }
+        ]
+    },
+    {
+
+        path: 'usuarios',
+        children:[{
+            path: 'list',
+            component: UsuarioListComponent
+        },
+        {
+            path: ':id',
+            component: UsuarioDetailComponent
+        },
+        {
+            path: ':create',
+            component: UsuarioCreateComponent
+        }
+        ]
+    },
+    {
+
+        path: 'equipos',
+        children:[{
+            path: 'list',
+            component: EquipoListComponent
+        },
+        {
+            path: ':id',
+            component: EquipoDetailComponent
+        }
+        
         ]
     },
     {
