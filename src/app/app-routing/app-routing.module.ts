@@ -141,11 +141,25 @@ const routes: Routes = [
         path: 'competencias',
         children: [{
             path: 'list',
-            component: CompetenciaListComponent
+            component: CompetenciaListComponent 
         },
     {
         path: ':id',
-        component: CompetenciaDetailComponent   
+        component: CompetenciaDetailComponent,
+        children: [
+            {
+                path: 'ejercicios',
+                children:[{
+                    path: 'list',
+                    component: EjercicioListComponent
+                },
+                {
+                    path: ':id',
+                    component: EjercicioDetailComponent
+                }
+                ]
+            }
+        ]   
     }]
     },
     {
