@@ -1,29 +1,36 @@
 <div class = "container fluid">
+  <h1>Otros Usuarios</h1>
   <div class = "col-md-12">
     <table class = "table table striped">
+      
         <thead class = "thead-dark">
           <tr>
-            <th> Nombre </th>
-            <th> NombreUsuario </th>
-            <th> Rol </th>
-            <th> Puntaje </th>
-            <th> Correo </th>
-            <th> Id  </th>
-            <th> Clave </th>
+            <th> id </th>
+            <th> nombre </th>
+            <th> apellido </th>
+
+            <th> correo </th>
+            <th> rol </th>
+            <th> puntaje </th>
+            <th> clave </th>
+
+            <th>  </th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor = "let usuario of usuarios">
-            <td> {{usuario.nombre }} </td>
-            <td> {{usuario.nombreUsuario }} </td>
-            <td> {{usuario.rol }} </td>
-            <td> {{usuario.puntaje }} </td>
-            <td> {{usuario.correo }} </td>
             <td> {{usuario.id }} </td>
-            <td> {{usuario.clave }} </td>
+            <td> {{usuario.nombre}}</td>
+            <td> {{usuario.apellido}}</td>
+            <td> {{usuario.correo}}</td>
+            <td> {{usuario.rol}}</td>
+            <td> {{usuario.puntaje}}</td>
+            <td> {{usuario.clave}}</td>
+
 
           </tr>
         </tbody>
     </table>
   </div>
 </div>
+

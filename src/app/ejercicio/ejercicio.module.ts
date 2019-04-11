@@ -5,6 +5,7 @@ import { EjercicioListComponent } from './ejercicio-list/ejercicio-list.componen
 import { EjercicioService } from './ejercicio.service';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { EjercicioCreateComponent } from './ejercicio-create/ejercicio-create.component';
 
 @NgModule({
   imports: [
@@ -12,8 +13,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ],
-  declarations: [EjercicioDetailComponent, EjercicioListComponent],
+  declarations: [EjercicioDetailComponent, EjercicioListComponent, EjercicioCreateComponent],
   providers: [EjercicioService],
-  exports: [EjercicioDetailComponent, EjercicioListComponent]
+  exports: [EjercicioDetailComponent, EjercicioListComponent, EjercicioCreateComponent]
 })
 export class EjercicioModule { }

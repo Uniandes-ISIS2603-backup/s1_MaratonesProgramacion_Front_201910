@@ -20,7 +20,7 @@ export class EjercicioListComponent implements OnInit {
   ejercicios: Ejercicio[];
 
   /**
-  * Asks the service to update the list of editorials
+  * Asks the service to update the list of ejercicios
   */
     getEjercicios(): void {
       this.ejercicioService.getEjercicios().subscribe(ejercicios => this.ejercicios = ejercicios);

@@ -2,12 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Usuario} from './usuario';
-import {UsuarioDetail} from './usuario-detail';
 
 
 const API_URL = "http://localhost:8080/s1_maratones-api";
-const usuarios = '/usuarios';
-
+const usuarios = 'usuarios.json';
+const usuario = 'usuario-';
 @Injectable({
   providedIn: 'root'
 })
@@ -25,8 +24,21 @@ export class UsuarioService {
     return this.http.get<Usuario[]>(API_URL + usuarios);
   }
 
-  getUsuarioDetail(usuarioId): Observable<UsuarioDetail> {
-    return this.http.get<UsuarioDetail>(API_URL + usuarios + '/' + usuarioId);
-}
-}
 
+
+  getUsuarioPorId(usuarioId: number): Observable<Usuario>
+  {
+    return this.http.get<Usuario>(API_URL + usuario + usuarioId + '.json');
+  }
+
+  postUsuario(usuario: Usuario):void
+  {
+    console.log(usuario);
+  }
+
+  createUsuario(equipo) : Observable<Usuario>
+  {
+    return this.http.post<Usuario>(API_URL + usuarios, usuario);
+  }
+
+}

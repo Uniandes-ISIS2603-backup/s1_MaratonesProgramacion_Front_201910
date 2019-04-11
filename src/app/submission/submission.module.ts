@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { SubmissionListComponent } from './submission-list/submission-list.component';
 import { SubmissionDetailComponent } from './submission-detail/submission-detail.component';
 import { RouterModule } from '@angular/router';
+import { SubmissionCreateComponent } from './submission-create/submission-create.component';
 
 
 @NgModule({
@@ -13,8 +14,8 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule
   ],
-  declarations: [SubmissionListComponent, SubmissionDetailComponent],
+  declarations: [SubmissionListComponent, SubmissionDetailComponent, SubmissionCreateComponent],
   providers: [SubmissionService],
-  exports: [SubmissionDetailComponent, SubmissionListComponent]
+  exports: [SubmissionDetailComponent, SubmissionListComponent, SubmissionCreateComponent]
 })
 export class SubmissionModule { }

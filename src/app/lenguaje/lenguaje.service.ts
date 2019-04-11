@@ -29,5 +29,10 @@ export class LenguajeService {
     return this.http.get<LenguajeDetail>(API_URL + lenguajes + '/' + lenguajeId);
 }
 
+createLenguaje(lenguaje: Lenguaje): Observable<Lenguaje>{
+
+  return this.http.post<Lenguaje>(API_URL + lenguajes, lenguaje);
+}
+
 
 }

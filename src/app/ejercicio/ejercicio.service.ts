@@ -27,7 +27,11 @@ export class EjercicioService {
 
   getEjerciciosDetail(ejercicioId): Observable<EjercicioDetail> {
     return this.http.get<EjercicioDetail>(API_URL + ejercicios + '/' + ejercicioId);
-}
+  }
+
+  postEjercicio(ejercicio: Ejercicio): Observable<Ejercicio> {
+    return this.http.post<Ejercicio>(API_URL + ejercicios, ejercicio);
+  }
 
 
 }

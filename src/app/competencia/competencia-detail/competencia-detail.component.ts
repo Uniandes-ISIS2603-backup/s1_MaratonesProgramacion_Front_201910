@@ -1,3 +1,6 @@
+import { CompetenciaDetail } from './../competencia-detail';
+import { ActivatedRoute } from '@angular/router';
+import { CompetenciaService } from './../competencia.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetenciaDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private compentenciaService: CompetenciaService,
+    private route: ActivatedRoute
+  ) { }
+
+  competencia_id: number;
+
+  competenciadetail: CompetenciaDetail;
 
   ngOnInit() {
+    this.competencia_id = +this.route.snapshot.paramMap.get('id');
+
+    this.competenciadetail = new CompetenciaDetail();
+
+    
   }
 
+  getCompeteniaDetail(): void {
+    this.compentenciaService.getCompetenciasDetail(this.competencia_id)
+        .subscribe(comDetail => {
+            this.competenciadetail = comDetail
+        });
+  }
 }

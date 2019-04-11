@@ -27,6 +27,10 @@ export class Usuario {
     */
     nombre: string;
     
+    /**
+    * El usuario nombre
+    */
+    apellido: string;
 
     /**
     * El usuario correo
