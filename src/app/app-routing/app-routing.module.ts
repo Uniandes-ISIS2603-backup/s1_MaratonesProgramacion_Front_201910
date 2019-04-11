@@ -17,6 +17,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
+import { EjercicioCreateComponent } from './../ejercicio/ejercicio-create/ejercicio-create.component';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
@@ -62,6 +63,10 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: EjercicioListComponent
+        },
+        {
+           path: 'add',
+           component: EjercicioCreateComponent     
         },
         {
             path: ':id',
