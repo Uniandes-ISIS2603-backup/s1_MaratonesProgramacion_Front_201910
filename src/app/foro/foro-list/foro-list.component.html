@@ -1,12 +1,14 @@
 <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action active">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">List group item heading</h5>
+            <h5 class="mb-1">Foros de discusión</h5>
             <small>3 days ago</small>
           </div>
-          <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-          <small>Donec id elit non mi porta.</small>
+          <p class="mb-1">Participa en discusiones relacionadas a todo sobre maratones de programación!.</p>
+          <button routerLink = "/foros/add" type="button" class="btn btn-secondary btn-lg" >Crear un nuevo foro de discusión</button>
+          
         </a>
+    
         <a href="#" class="list-group-item list-group-item-action" *ngFor = "let f of foros" routerLink = "/foros/{{f.id}}">
           
           <div class="d-flex w-100 justify-content-between">
