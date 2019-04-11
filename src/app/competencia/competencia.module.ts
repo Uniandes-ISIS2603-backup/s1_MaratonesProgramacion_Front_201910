@@ -1,3 +1,4 @@
+import { CompetenciaCreateComponent } from './competencia-create/competencia-create.component';
 import { CompetenciaListComponent } from './competenciaList/competenciaList.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,9 +18,9 @@ import { CompetenciaDetailComponent} from './competencia-detail/competencia-deta
     AppRoutingModule,
     HttpClientModule
   ],
-  declarations: [CompetenciaListComponent, CompetenciaComponent, CompetenciaDetailComponent],
+  declarations: [CompetenciaListComponent, CompetenciaComponent, CompetenciaDetailComponent, CompetenciaCreateComponent],
   providers:[CompetenciaService],
-  exports: [CompetenciaListComponent,CompetenciaComponent, CompetenciaDetailComponent]
+  exports: [CompetenciaListComponent,CompetenciaComponent, CompetenciaDetailComponent, CompetenciaCreateComponent]
 
 })
 

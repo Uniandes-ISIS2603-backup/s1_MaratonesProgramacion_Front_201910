@@ -20,4 +20,8 @@ getCompetencias() :Observable<Competencia[]>{
 getCompetenciasDetail(competenciaId): Observable<CompetenciaDetail> {
   return this.http.get<CompetenciaDetail>(API_URL + competencias + '/' + competenciaId);
 }
+
+postCompetencia(competencia: Competencia): Observable<Competencia>{
+  return this.http.post<Competencia>(API_URL + competencias , competencia);
+}
 }

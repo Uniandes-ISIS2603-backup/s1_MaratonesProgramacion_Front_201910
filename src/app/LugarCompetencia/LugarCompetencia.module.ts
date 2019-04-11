@@ -5,14 +5,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LugarCompetenciaComponent } from './LugarCompetencia.component';
 import { FormsModule } from '@angular/forms';
+import { LugarCompetenciaCreateComponent } from './lugarCompetencia-create/lugarCompetencia-create.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule
   ],
-  declarations: [LugarCompetenciaListComponent,LugarCompetenciaComponent, LugarCompetenciaDetailComponent],
+  declarations: [LugarCompetenciaListComponent,LugarCompetenciaComponent, LugarCompetenciaDetailComponent, LugarCompetenciaCreateComponent],
   providers: [LugarCompetenciaService],
-  exports: [LugarCompetenciaListComponent,LugarCompetenciaComponent,LugarCompetenciaDetailComponent]
+  exports: [LugarCompetenciaListComponent,LugarCompetenciaComponent,LugarCompetenciaDetailComponent, LugarCompetenciaCreateComponent]
 })
 export class LugarCompetenciaModule { }

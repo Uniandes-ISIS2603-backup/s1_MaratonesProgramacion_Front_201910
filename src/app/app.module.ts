@@ -1,3 +1,5 @@
+import { EquipoModule } from './equipo/equipo.module';
+import { UsuarioModule } from './usuario/usuario.module';
 import { CompetenciaModule } from './competencia/competencia.module';
 import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
 import { LugarCompetenciaComponent } from './LugarCompetencia/LugarCompetencia.component';
@@ -22,13 +24,6 @@ import {SubmissionModule} from './submission/submission.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
 
-
-
-
-import { UsuarioModule } from './usuario/usuario.module';
-
-
-
 @NgModule({
     declarations: [
         AppComponent
@@ -38,6 +33,8 @@ import { UsuarioModule } from './usuario/usuario.module';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        UsuarioModule,
+        EquipoModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         AuthModule,

@@ -1,5 +1,8 @@
-import { CompetenciaListComponent } from './../competencia/competenciaList/competenciaList.component';
-import {CompetenciaDetailComponent} from './../competencia/competencia-detail/competencia-detail.component';
+import { CompetenciaDetailComponent } from './../competencia/competencia-detail/competencia-detail.component';
+import { EquipoDetailComponent } from './../equipo/equipo-detail/equipo-detail.component';
+import { EquipoListComponent } from './../equipo/equipo-list/equipo-list.component';
+import { UsuarioCreateComponent } from './../usuario/usuario-create/usuario-create.component';
+import { UsuarioListComponent } from './../usuario/usuario-list/usuario-list.component';
 import { LugarCompetenciaListComponent } from './../LugarCompetencia/LugarCompetenciaList/LugarCompetenciaList.component';
 import { LenguajeDetailComponent } from './../lenguaje/lenguaje-detail/lenguaje-detail.component';
 import { SubmissionDetailComponent } from './../submission/submission-detail/submission-detail.component';
@@ -8,17 +11,17 @@ import { LenguajeListComponent } from './../lenguaje/lenguaje-list/lenguaje-list
 import { SubmissionListComponent } from './../submission/submission-list/submission-list.component';
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
 import { ForoListComponent } from './../foro/foro-list/foro-list.component';
+import { ForoDetailComponent } from './../foro/foro-detail/foro-detail.component';
 import { ComentarioListComponent } from './../comentario/comentario-list/comentario-list.component';
+import { ComentarioDetailComponent } from './../comentario/comentario-detail/comentario-detail.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
-import {UsuarioDetailComponent} from '../usuario/usuario-detail/usuario-detail.component';
-import {UsuarioListComponent} from '../usuario/usuario-list/usuario-list.component';
-
-
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
+import { UsuarioDetailComponent } from '../usuario/usuario-detail/usuario-detail.component';
 
 const routes: Routes = [
 
@@ -104,6 +107,37 @@ const routes: Routes = [
         ]
     },
     {
+
+        path: 'usuarios',
+        children:[{
+            path: 'list',
+            component: UsuarioListComponent
+        },
+        {
+            path: ':id',
+            component: UsuarioDetailComponent
+        },
+        {
+            path: ':create',
+            component: UsuarioCreateComponent
+        }
+        ]
+    },
+    {
+
+        path: 'equipos',
+        children:[{
+            path: 'list',
+            component: EquipoListComponent
+        },
+        {
+            path: ':id',
+            component: EquipoDetailComponent
+        }
+        
+        ]
+    },
+    {
         path: 'competencias',
         children: [{
             path: 'list',
@@ -124,13 +158,29 @@ const routes: Routes = [
     },
     {
         path: 'foros',
-        component: ForoListComponent
+        children:[{
+            path: 'list',
+            component: ForoListComponent
+        },
+        {
+            path: ':id',
+            component: ForoDetailComponent
+        }
+        ]
     },
     {
         path: 'comentarios',
-        component: ComentarioListComponent
-    },
-
+        component: ComentarioListComponent,
+        children:[{
+            path: 'list',
+            component: ComentarioListComponent
+        },
+        {
+            path: ':id',
+            component: ComentarioDetailComponent
+        }
+        ]
+    }
 ];
 
 @NgModule({

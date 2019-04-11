@@ -18,4 +18,8 @@ constructor(private http: HttpClient) { }
     getLugaresCompetenciaDetail(lugarId): Observable<LugarCompetenciaDetail> {
       return this.http.get<LugarCompetenciaDetail>(API_URL + lugaresCompetencia + '/' + lugarId);
     }
+
+    postLugarCompetencia(lugarCompetencia: LugarCompetencia): Observable<LugarCompetencia>{
+      return this.http.post<LugarCompetencia>(API_URL + lugaresCompetencia , lugarCompetencia);
+    }
 }
