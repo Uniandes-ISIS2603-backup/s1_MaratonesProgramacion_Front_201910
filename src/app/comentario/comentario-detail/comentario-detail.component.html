@@ -1,3 +1,23 @@
-<p>
-  comentario-detail works!
-</p>
+<div class = "container fluid">
+    <div class = "col-md-12">
+      <table class = "table table striped">
+          <thead class = "thead-dark">
+            <tr>
+              <th> Id </th>
+              <th> mensaje </th>
+              <th> VotosAFavor </th>
+              <th> VotosEnContra </th>           
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let c of comentarios">
+              <td> {{f.id }} </td>
+              <td> {{f.mensaje}}</td>
+              <td> {{f.votosAFavor}} </td>
+              <td> {{f.votosEnContra}} </td>
+            </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+  
