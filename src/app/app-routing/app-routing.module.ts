@@ -1,3 +1,4 @@
+import { CompetenciaComponent } from './../competencia/competencia.component';
 import { CompetenciaDetailComponent } from './../competencia/competencia-detail/competencia-detail.component';
 import { EquipoDetailComponent } from './../equipo/equipo-detail/equipo-detail.component';
 import { EquipoListComponent } from './../equipo/equipo-list/equipo-list.component';
@@ -158,9 +159,31 @@ const routes: Routes = [
                     component: EjercicioDetailComponent
                 }
                 ]
+            },
+            {
+
+                path: 'equipos',
+                children:[{
+                    path: 'list',
+                    component: EquipoListComponent
+                },
+                {
+                    path: ':id',
+                    component: EquipoDetailComponent
+                }
+                
+                ]
+            },  
+            {
+                path: 'lugares',
+                children: [{
+                    path: 'list',
+                    component: LugarCompetenciaListComponent
+                }]
+        
             }
         ]   
-    }]
+    }],
     },
     {
         path: 'lugares',
