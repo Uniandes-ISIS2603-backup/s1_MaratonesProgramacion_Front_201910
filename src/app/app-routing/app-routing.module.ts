@@ -161,6 +161,10 @@ const routes: Routes = [
             component: ComentarioListComponent
         },
         {
+            path: 'add',
+            component: ComentarioCreateComponent
+        },
+        {
             path: ':id',
             component: ComentarioDetailComponent
         }
