@@ -9,6 +9,21 @@
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" routerLink="/usuarios/list" href="#">Participantes <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/equipos/list" href="#">Equipos</a>
+              </li>
+              
+              <li class="nav-item">
+
+                <a class="nav-link disabled" href="#">Submissions</a>
+              </li>
+            </ul>
+          </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav mr-auto mt-0">
                 
@@ -17,7 +32,7 @@
                 <div class="flex-row" *ngxPermissionsOnly="['GUEST']">
                     <div class="form-inline">
                         <li class="right-space"><a id="signup-navbar-item" routerLink="/auth/sign-up"><span class="fa fa-user"></span>
-                                Sign Up</a></li>
+                                Sign Up     </a></li>
                         <li><a id="login-navbar-item" routerLink="/auth/login"><span class="fa fa-sign-in"></span>Login</a></li>
                     </div>
                 </div>
@@ -28,6 +43,7 @@
                 </div>
             </div>
         </div>
+        
     </nav>
 
     <div>
