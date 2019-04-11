@@ -144,13 +144,14 @@ const routes: Routes = [
             component: ForoListComponent
         },
         {
-            path: ':id',
-            component: ForoDetailComponent
-        },
-        {
             path: 'add',
             component: ForoCreateComponent
+        },
+        {
+            path: ':id',
+            component: ForoDetailComponent
         }
+
         ]
     },
     {
