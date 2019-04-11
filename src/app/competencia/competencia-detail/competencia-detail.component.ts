@@ -24,10 +24,11 @@ export class CompetenciaDetailComponent implements OnInit {
 
     this.competenciadetail = new CompetenciaDetail();
 
+    this.getCompetenciaDetail();
     
   }
 
-  getCompeteniaDetail(): void {
+  getCompetenciaDetail(): void {
     this.compentenciaService.getCompetenciasDetail(this.competencia_id)
         .subscribe(comDetail => {
             this.competenciadetail = comDetail

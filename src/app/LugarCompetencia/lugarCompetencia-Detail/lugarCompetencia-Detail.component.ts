@@ -24,13 +24,14 @@ export class LugarCompetenciaDetailComponent implements OnInit {
 
     this.lugarCompetenciaDetail = new LugarCompetenciaDetail;
 
+    this.getLugarCompetenciaDetail();
     
   }
 
   getLugarCompetenciaDetail(): void {
-    this.compentenciaService.getCompetenciasDetail(this.competencia_id)
-        .subscribe(comDetail => {
-            this.competenciadetail = comDetail
+    this.compentenciaService.getLugaresCompetenciaDetail(this.lugar_id)
+        .subscribe(luDetail => {
+            this.lugarCompetenciaDetail = luDetail
         });
   }
 }
