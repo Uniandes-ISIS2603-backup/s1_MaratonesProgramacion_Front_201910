@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <div class="container-fluid">   
+      <p class="h4 p-3">Competencia: {{competenciadetail.nombre}}</p>
+      <p>Descripcion : {{competenciadetail.descripcion}}</p>
+      <p>Puntos otorgados : {{competenciadetail.puntos}}</p>
+      <p>Condiciones : {{competenciadetail.condiciones}}</p>
+      </div>
+  </div>
+  <h2>Ubicaciones de la competencia</h2>
+  <hr>
+<app-LugarCompetenciaList></app-LugarCompetenciaList>
+<h2>equipos en la competencia</h2>
+<hr>
+<app-equipo-list></app-equipo-list>
+<h2>Ejercicios de la competencia</h2>
+<hr>
+<app-ejercicio-list></app-ejercicio-list>
+<h2>Jueces de la competencia</h2>
+<app-usuario-list></app-usuario-list>
