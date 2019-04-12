@@ -1,0 +1,21 @@
+<div class = "container fluid">
+  <div class = "col-md-12">
+    <table class = "table table striped">
+        <thead class = "thead-dark">
+          <tr>
+            <th> Blogs </th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr *ngFor="let i of blog">
+            <td style="cursor: pointer;"> 
+              	<a class="nav-link" [routerLink]="['/blogs', { outlets: { 'detail': [i.id] } }]" routerLinkActive="active">{{i.nombre}}</a>
+            </td>
+           <td>{{i.descripcion}}</td>
+
+          </tr>
+         
+        </tbody>
+    </table>
+  </div>
+</div>

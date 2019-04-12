@@ -1,3 +1,5 @@
+import { CompetenciaComponent } from './../competencia/competencia.component';
+import { CompetenciaDetailComponent } from './../competencia/competencia-detail/competencia-detail.component';
 import { EquipoDetailComponent } from './../equipo/equipo-detail/equipo-detail.component';
 import { EquipoListComponent } from './../equipo/equipo-list/equipo-list.component';
 import { UsuarioCreateComponent } from './../usuario/usuario-create/usuario-create.component';
@@ -17,11 +19,18 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {NgxPermissionsGuard} from 'ngx-permissions';
+import { EjercicioCreateComponent } from './../ejercicio/ejercicio-create/ejercicio-create.component';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
 import { UsuarioDetailComponent } from '../usuario/usuario-detail/usuario-detail.component';
+import { SubmissionCreateComponent } from '../submission/submission-create/submission-create.component';
 
+import { BLogListComponent } from './../blog/blog-list/blog-list.component';
+import { BlogDetailComponent } from './../blog/blog-detail/blog-detail.component';
+import { InstitucionListComponent } from './../institucion/institucion-list/institucion-list.component';
+import { InstitucionDetailComponent } from './../institucion/institucion-detail/institucion-detail.component';
+import { InstitucionCreateComponent } from './../institucion/institucion-create/institucion-create.component';
 const routes: Routes = [
 
      {
@@ -46,22 +55,36 @@ const routes: Routes = [
                         only: ['GUEST']
                     }
                 }
+            },
+            {
+                path: ':usuarios',
+                children: [
+                    {
+                        path: 'list',
+                        component: UsuarioListComponent
+                    },
+                    {
+                        path: ':id',
+                        component: UsuarioDetailComponent,
+                        runGuardsAndResolvers: 'always'
+                    }
+                ]
             }
         ]
     },
     {
         path: 'home',
         component: AuthLoginComponent
-    },/*
-    {
-        path: '**',
-        redirectTo: 'home',
-    }*/
+    },
     {
         path: 'ejercicios',
         children:[{
             path: 'list',
             component: EjercicioListComponent
+        },
+        {
+           path: 'add',
+           component: EjercicioCreateComponent     
         },
         {
             path: ':id',
@@ -75,6 +98,10 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: SubmissionListComponent
+        },
+        {
+            path: 'add',
+            component: SubmissionCreateComponent
         },
         {
             path: ':id',
@@ -128,11 +155,57 @@ const routes: Routes = [
     },
     {
         path: 'competencias',
-        component: CompetenciaListComponent
+        children: [{
+            path: 'list',
+            component: CompetenciaListComponent 
+        },
+    {
+        path: ':id',
+        component: CompetenciaDetailComponent,
+        children: [
+            {
+                path: 'ejercicios',
+                children:[{
+                    path: 'list',
+                    component: EjercicioListComponent
+                },
+                {
+                    path: ':id',
+                    component: EjercicioDetailComponent
+                }
+                ]
+            },
+            {
+
+                path: 'equipos',
+                children:[{
+                    path: 'list',
+                    component: EquipoListComponent
+                },
+                {
+                    path: ':id',
+                    component: EquipoDetailComponent
+                }
+                
+                ]
+            },  
+            {
+                path: 'lugares',
+                children: [{
+                    path: 'list',
+                    component: LugarCompetenciaListComponent
+                }]
+        
+            }
+        ]   
+    }],
     },
     {
-        path: 'lugaresCompetencia',
-        component: LugarCompetenciaListComponent
+        path: 'lugares',
+        children: [{
+            path: 'list',
+            component: LugarCompetenciaListComponent
+        }]
 
     },
     {
@@ -149,6 +222,7 @@ const routes: Routes = [
     },
     {
         path: 'comentarios',
+        component: ComentarioListComponent,
         children:[{
             path: 'list',
             component: ComentarioListComponent
@@ -158,7 +232,38 @@ const routes: Routes = [
             component: ComentarioDetailComponent
         }
         ]
+    },
+    {
+        path: 'blogs',
+        children: [{
+          path: 'list',
+          component: BLogListComponent
+        },
+        {
+          path: ':id',
+          component: BlogDetailComponent,
+          outlet: 'detail'
+        }
+        ]
+    
+      },
+    { path: 'instituciones',
+    children: [{
+      path: 'list',
+      component: InstitucionListComponent
+    },
+    {
+      path: ':id',
+      component: InstitucionDetailComponent,
+      outlet: 'detail'
+    },
+     {
+      path: ':create',
+      component: InstitucionCreateComponent,
+      
     }
+    ]
+     }
 ];
 
 @NgModule({
