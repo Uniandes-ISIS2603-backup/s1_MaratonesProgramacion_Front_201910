@@ -5,8 +5,8 @@ import {Foro} from './foro';
 import {ForoDetail} from './foro-detail';
 
 
-const API_URL = "../../assets/";
-const foros = '/foros.json';
+const API_URL = "http://localhost:8080/s1_maratones-api/";
+const foros = '/foros';
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +34,7 @@ export class ForoService {
   }
 
     getForosDetail(foroId): Observable<ForoDetail> {
-        return this.http.get<ForoDetail>(API_URL + 'foros' + foroId + '.json'); //API_URL + foros + '/' + foroId
+        return this.http.get<ForoDetail>(API_URL + foros + '/' + foroId); //API_URL + 'foros' + foroId + '.json'
     }
 
 

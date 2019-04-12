@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {comentarioService} from '../comentario.service';
+import {ComentarioService} from '../comentario.service';
 import { ActivatedRoute } from '@angular/router';
 import { ComentarioDetail } from '../comentario-detail';
 
