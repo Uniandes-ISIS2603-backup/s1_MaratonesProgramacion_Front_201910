@@ -1,0 +1,20 @@
+<div class = "container fluid">
+    <div class = "col-md-12">
+        <br>
+        <h2 class="text-center">Subir una respuesta al ejercicio</h2>
+        <br>
+        <form name="ejercicio" (ngSubmit)="f.form.valid && crearSubmission()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for= "submissionCode"><b>Codigo</b></label>
+                <input type = "text" name= "submissionCode" class="form-control" id= "submissionCode" [(ngModel)] = "submission.codigo"
+                #submissionCode = "ngModel"  required>
+            </div>
+        <form method="POST" action="uploadFile" enctype="multipart/form-data">
+            <strong>Upload file:  </strong> 
+            <td style= "cursor:pointer;">
+            <input type="file" name="file"  id= "submissionArchivo" [(ngModel)] = "submission.archivo" #submissionArchivo = "ngModel"/>
+            </td>
+        </form>
+        </form>
+    </div>
+</div>

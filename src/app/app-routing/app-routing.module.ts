@@ -24,6 +24,7 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { CompetenciaListComponent } from '../competencia/competenciaList/competenciaList.component';
 import { UsuarioDetailComponent } from '../usuario/usuario-detail/usuario-detail.component';
+import { SubmissionCreateComponent } from '../submission/submission-create/submission-create.component';
 
 const routes: Routes = [
 
@@ -82,6 +83,10 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: SubmissionListComponent
+        },
+        {
+            path: 'add',
+            component: SubmissionCreateComponent
         },
         {
             path: ':id',
