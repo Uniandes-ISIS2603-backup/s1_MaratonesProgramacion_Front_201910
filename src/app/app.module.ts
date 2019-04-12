@@ -1,3 +1,5 @@
+import { EquipoModule } from './equipo/equipo.module';
+import { UsuarioModule } from './usuario/usuario.module';
 import { CompetenciaModule } from './competencia/competencia.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
@@ -20,14 +22,6 @@ import {SubmissionModule} from './submission/submission.module';
 import {LugarCompetenciaModule} from './LugarCompetencia/LugarCompetencia.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
-import {UsuarioModule} from './usuario/usuario.module';
-import { UsuarioService } from './usuario/usuario.service';
-
-
-
-
-
-
 
 @NgModule({
     declarations: [
@@ -37,8 +31,9 @@ import { UsuarioService } from './usuario/usuario.service';
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
-        BrowserAnimationsModule,
         UsuarioModule,
+        EquipoModule,
+        BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         AuthModule,
         FormsModule,
@@ -65,5 +60,6 @@ import { UsuarioService } from './usuario/usuario.service';
             useClass: HttpErrorInterceptor,
             multi: true
         }
+    ]
 })
 export class AppModule {}

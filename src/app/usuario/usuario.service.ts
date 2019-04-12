@@ -36,4 +36,9 @@ export class UsuarioService {
     console.log(usuario);
   }
 
+  createUsuario(equipo) : Observable<Usuario>
+  {
+    return this.http.post<Usuario>(API_URL + usuarios, usuario);
+  }
+
 }

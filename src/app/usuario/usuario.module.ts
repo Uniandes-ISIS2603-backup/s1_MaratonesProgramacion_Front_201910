@@ -4,13 +4,12 @@ import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioService } from './usuario.service';
 import { UsuarioDetailComponent} from './usuario-detail/usuario-detail.component';
 import { UsuarioCreateComponent } from './usuario-create/usuario-create.component';
-import { UsuarioComponent } from './usuario.component';
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [UsuarioListComponent,UsuarioDetailComponent, UsuarioComponent,UsuarioCreateComponent],
+  declarations: [UsuarioListComponent,UsuarioDetailComponent,UsuarioCreateComponent],
   providers: [UsuarioService],
-  exports: [UsuarioListComponent,UsuarioDetailComponent,UsuarioComponent]
+  exports: [UsuarioListComponent,UsuarioDetailComponent]
 })
 export class UsuarioModule { }
