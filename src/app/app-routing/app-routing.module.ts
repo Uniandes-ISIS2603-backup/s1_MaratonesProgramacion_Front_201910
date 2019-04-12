@@ -13,8 +13,10 @@ import { SubmissionListComponent } from './../submission/submission-list/submiss
 import { EjercicioListComponent } from './../ejercicio/ejercicio-list/ejercicio-list.component';
 import { ForoListComponent } from './../foro/foro-list/foro-list.component';
 import { ForoDetailComponent } from './../foro/foro-detail/foro-detail.component';
+import { ForoCreateComponent } from './../foro/foro-create/foro-create.component';
 import { ComentarioListComponent } from './../comentario/comentario-list/comentario-list.component';
 import { ComentarioDetailComponent } from './../comentario/comentario-detail/comentario-detail.component';
+import { ComentarioCreateComponent } from './../comentario/comentario-create/comentario-create.component';
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
@@ -215,9 +217,14 @@ const routes: Routes = [
             component: ForoListComponent
         },
         {
+            path: 'add',
+            component: ForoCreateComponent
+        },
+        {
             path: ':id',
             component: ForoDetailComponent
         }
+
         ]
     },
     {
@@ -226,6 +233,10 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: ComentarioListComponent
+        },
+        {
+            path: 'add',
+            component: ComentarioCreateComponent
         },
         {
             path: ':id',

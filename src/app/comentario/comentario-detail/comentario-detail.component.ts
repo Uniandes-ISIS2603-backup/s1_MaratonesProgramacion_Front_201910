@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ComentarioService} from '../comentario.service';
+import { ActivatedRoute } from '@angular/router';
+import { ComentarioDetail } from '../comentario-detail';
 
 @Component({
   selector: 'app-comentario-detail',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComentarioDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+        private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
