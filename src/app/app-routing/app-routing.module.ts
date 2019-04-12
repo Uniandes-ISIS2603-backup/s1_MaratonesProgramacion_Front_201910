@@ -28,6 +28,11 @@ import { CompetenciaListComponent } from '../competencia/competenciaList/compete
 import { UsuarioDetailComponent } from '../usuario/usuario-detail/usuario-detail.component';
 import { SubmissionCreateComponent } from '../submission/submission-create/submission-create.component';
 
+import { BLogListComponent } from './../blog/blog-list/blog-list.component';
+import { BlogDetailComponent } from './../blog/blog-detail/blog-detail.component';
+import { InstitucionListComponent } from './../institucion/institucion-list/institucion-list.component';
+import { InstitucionDetailComponent } from './../institucion/institucion-detail/institucion-detail.component';
+import { InstitucionCreateComponent } from './../institucion/institucion-create/institucion-create.component';
 const routes: Routes = [
 
      {
@@ -238,7 +243,38 @@ const routes: Routes = [
             component: ComentarioDetailComponent
         }
         ]
+    },
+    {
+        path: 'blogs',
+        children: [{
+          path: 'list',
+          component: BLogListComponent
+        },
+        {
+          path: ':id',
+          component: BlogDetailComponent,
+          outlet: 'detail'
+        }
+        ]
+    
+      },
+    { path: 'instituciones',
+    children: [{
+      path: 'list',
+      component: InstitucionListComponent
+    },
+    {
+      path: ':id',
+      component: InstitucionDetailComponent,
+      outlet: 'detail'
+    },
+     {
+      path: ':create',
+      component: InstitucionCreateComponent,
+      
     }
+    ]
+     }
 ];
 
 @NgModule({
