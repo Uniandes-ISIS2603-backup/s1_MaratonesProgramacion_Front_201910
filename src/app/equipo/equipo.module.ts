@@ -10,6 +10,7 @@ import { EquipoService } from './equipo.service';
     CommonModule
   ],
   declarations: [EquipoListComponent, EquipoCreateComponent, EquipoDetailComponent],
-  providers: [EquipoService]
+  providers: [EquipoService],
+  exports: [EquipoListComponent]
 })
 export class EquipoModule { }

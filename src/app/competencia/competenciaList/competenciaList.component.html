@@ -11,24 +11,20 @@
                 <th>puntos</th>
                 <th>condiciones</th>
                 <th>fechaFin</th>
-  
               </tr>
             </thead>
-            <body>
+            <tbody>
               <tr *ngFor= "let c of competencias">
-                <td >
-                    {{c.id}}
-                    {{c.esVirtual}}
-                    {{c.fechaInicio}}
-                    {{c.nombre}}
-                    {{c.descripcion}}
-                    {{c.puntos}}
-                    {{c.condiciones}}
-                    {{c.fechaFin}}
-                </td>
-  
+                <td>{{c.id}}</td>
+                <td>{{c.esVirtual}}</td>
+                <td>{{c.fechaInicio}}</td>
+                <td>{{c.nombre}}</td>
+                <td>{{c.descripcion}}</td>
+                <td>{{c.puntos}}</td>
+                <td>{{c.condiciones}}</td>
+                <td>{{c.fechaFin}}</td>
               </tr>
-            </body>
+            </tbody>
         </table>
     </div>
   </div>
