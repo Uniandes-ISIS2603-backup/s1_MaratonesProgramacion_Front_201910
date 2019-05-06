@@ -23,6 +23,7 @@ import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
+import {IndexModule} from './index/index.module';
 
 import {InstitucionModule} from './institucion/institucion.module';
 import {BlogModule} from './blog/blog.module';
@@ -33,6 +34,7 @@ import {BlogModule} from './blog/blog.module';
     ],
     imports: [
         BrowserModule,
+        IndexModule,
         AppRoutingModule,
         HttpClientModule,
         UsuarioModule,
