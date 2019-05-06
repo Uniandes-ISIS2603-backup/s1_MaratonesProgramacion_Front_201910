@@ -1,0 +1,36 @@
+<div> 
+  <div class= "col-6">
+    <div class = "col-12">
+      <br>
+      <h2 class="text-center">Crear</h2>
+      <br>
+      <form name="ejercicio" (ngSubmit)="f.form.valid && crearEjercicio()" #f="ngForm" novalidate>
+         <div class="form-group">
+            <label for= "ejercicioName"><b>Nombre</b></label>
+            <input type = "text" name= "ejercicioName" class="form-control" id= "ejercicioName" [(ngModel)] = "ejercicio.nombre"
+             #ejercicioName = "ngModel"  required>
+         </div>
+         <div class="form-group">
+          <label for= "ejercicioDescripcion"><b>Descripcion</b></label>
+          <input type = "text" name= "ejercicioDescripcion" class="form-control" id= "ejercicioDescripcion" [(ngModel)] = "ejercicio.descripcion"
+           #ejercicioDescripcion = "ngModel"  required>
+       </div>
+        <div class = "form-group">
+          <label for="ejercicioNivel"><b>Nivel de dificultad</b></label>
+          <input type="number" name= "ejercicioNivel" class= "form-control" id="ejercicioNivel" [(ngModel)]= "ejercicio.nivel"
+          #ejercicioNivel= "ngModel" required>
+        </div>
+        <div class = "form-group">
+          <label for="ejercicioPuntaje"><b>Puntos que ofrece</b></label>
+          <input type="number" name= "ejercicioPuntaje" class= "form-control" id="ejercicioPuntaje" [(ngModel)]= "ejercicio.puntaje"
+          #ejercicioPuntaje= "ngModel"  required> 
+        </div>
+        <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary" >Create</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="f.reset() && cancelCreation()">Cancel</button>
+            </div>
+      </form>
+    </div>
+  </div>
+</div>                                
