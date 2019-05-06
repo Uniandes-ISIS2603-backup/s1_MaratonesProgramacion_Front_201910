@@ -24,6 +24,8 @@ import {SubmissionModule} from './submission/submission.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
 
+import {InstitucionModule} from './institucion/institucion.module';
+import {BlogModule} from './blog/blog.module';
 @NgModule({
     declarations: [
         AppComponent
@@ -46,6 +48,8 @@ import {ComentarioModule} from './comentario/comentario.module';
         LugarCompetenciaModule,
         ForoModule,
         ComentarioModule,
+        InstitucionModule,
+        BlogModule,
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',
@@ -68,3 +72,4 @@ import {ComentarioModule} from './comentario/comentario.module';
     ]
 })
 export class AppModule { }
+
