@@ -1,3 +1,4 @@
+import { IndexComponent } from './../index/index.component';
 import { CompetenciaComponent } from './../competencia/competencia.component';
 import { CompetenciaDetailComponent } from './../competencia/competencia-detail/competencia-detail.component';
 import { EquipoDetailComponent } from './../equipo/equipo-detail/equipo-detail.component';
@@ -77,6 +78,9 @@ const routes: Routes = [
     {
         path: 'home',
         component: AuthLoginComponent
+    },{
+        path: 'index',
+        component: IndexComponent
     },
     {
         path: 'ejercicios',
