@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = "../../assets/";
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
 const lugaresCompetencia = 'lugarCompetencias';
 @Injectable()
 export class LugarCompetenciaService {
