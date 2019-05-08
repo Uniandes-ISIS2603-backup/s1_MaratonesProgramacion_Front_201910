@@ -1,6 +1,8 @@
 import { EquipoModule } from './equipo/equipo.module';
 import { UsuarioModule } from './usuario/usuario.module';
 import { CompetenciaModule } from './competencia/competencia.module';
+import { LugarCompetenciaModule } from './LugarCompetencia/LugarCompetencia.module';
+import { LugarCompetenciaComponent } from './LugarCompetencia/LugarCompetencia.component';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
@@ -19,16 +21,20 @@ import {AuthModule} from './auth/auth.module';
 import {LenguajeModule} from './lenguaje/lenguaje.module';
 import {EjercicioModule} from './ejercicio/ejercicio.module';
 import {SubmissionModule} from './submission/submission.module';
-import {LugarCompetenciaModule} from './LugarCompetencia/LugarCompetencia.module';
 import {ForoModule} from './foro/foro.module';
 import {ComentarioModule} from './comentario/comentario.module';
+import {IndexModule} from './index/index.module';
 
+import {InstitucionModule} from './institucion/institucion.module';
+import {BlogModule} from './blog/blog.module';
 @NgModule({
     declarations: [
         AppComponent
+
     ],
     imports: [
         BrowserModule,
+        IndexModule,
         AppRoutingModule,
         HttpClientModule,
         UsuarioModule,
@@ -44,6 +50,8 @@ import {ComentarioModule} from './comentario/comentario.module';
         LugarCompetenciaModule,
         ForoModule,
         ComentarioModule,
+        InstitucionModule,
+        BlogModule,
         ToastrModule.forRoot({
             timeOut: 10000,
             positionClass: 'toast-bottom-right',
@@ -51,7 +59,10 @@ import {ComentarioModule} from './comentario/comentario.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule,
+        LugarCompetenciaModule,
+        CompetenciaModule,
+        UsuarioModule
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -62,4 +73,5 @@ import {ComentarioModule} from './comentario/comentario.module';
         }
     ]
 })
-export class AppModule {}
+export class AppModule { }
+

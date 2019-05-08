@@ -1,4 +1,4 @@
-export interface Competencia 
+export class Competencia 
 {
     id: number;
     esVirtual: boolean;

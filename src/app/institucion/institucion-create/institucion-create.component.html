@@ -1,0 +1,51 @@
+<div class = "container fluid">
+  <div class = "col-md-12">
+    
+     <div class="col-6">
+        <br>
+        <h2 class="text-center">Crea una Institucion</h2>
+        <br>
+        <form name="institucion" (ngSubmit)="f.form.valid && createInstitucion()" #f="ngForm" novalidate>
+
+            <div class="form-group">
+
+                <label for="institucionNombre"><b>Nombre</b></label>
+                <input type="text" name="institucionNombre" class="form-control" id="institucionNombre" [(ngModel)]="institucion.nombre"
+                    #institucionNombre="ngModel" [ngClass]="{ 'is-invalid': f.submitted && institucionNombre.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>El nombre dela institucion está faltando</div>
+                </div>
+                   
+                <label for="institucionImagen"><b>Imagen</b></label>
+                <input type="text" name="institucionImagen" class="form-control" id="institucionImagen" [(ngModel)]="institucion.imagen"
+                    #institucionImagen="ngModel" [ngClass]="{ 'is-invalid': f.submitted && institucionImagen.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>La imagen de la institucion está faltando</div>
+                </div>
+
+                <label for="institucionDescripcion"><b>Decripcion</b></label>
+                <input type="text" name="institucionDescripcion" class="form-control" id="institucionDescripcion" [(ngModel)]="institucion.descripcion"
+                    #institucionDescripcion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && institucionDescripcion.invalid }" required>
+                <div class="invalid-feedback">
+                    <div>La descripcion de la institucion está faltando</div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <div class="divider"></div>
+
+
+                <a class="nav-link" [routerLink]="['/instituciones/list']" routerLinkActive="active">
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+                </a>
+            </div>
+        </form>
+    </div>
+      
+  </div>
+</div>
