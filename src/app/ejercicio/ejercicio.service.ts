@@ -33,5 +33,9 @@ export class EjercicioService {
     return this.http.post<Ejercicio>(API_URL + ejercicios, ejercicio);
   }
 
+  putEjercicio(ejercicio: Ejercicio): Observable<EjercicioDetail>{
+    return this.http.put<EjercicioDetail>(API_URL + ejercicios + '/' + ejercicio.id, ejercicio);
+  }
+
 
 }
