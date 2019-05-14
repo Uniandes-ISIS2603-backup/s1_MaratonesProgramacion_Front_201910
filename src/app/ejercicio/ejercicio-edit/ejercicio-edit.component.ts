@@ -67,7 +67,7 @@ export class EjercicioEditComponent implements OnInit {
    * Metodo que inicializa el componente
    */
   ngOnInit() {
-
+    this.editEjercicio();
   }
 
   /**

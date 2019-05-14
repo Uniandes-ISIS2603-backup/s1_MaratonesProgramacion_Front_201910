@@ -34,5 +34,13 @@ createLenguaje(lenguaje: Lenguaje): Observable<Lenguaje>{
   return this.http.post<Lenguaje>(API_URL + lenguajes, lenguaje);
 }
 
+editLenguaje(lenguaje: Lenguaje): Observable<LenguajeDetail>{
+  return this.http.put<LenguajeDetail>(API_URL + lenguajes + '/' + lenguaje.id, lenguaje);
+}
+
+deleteLenguaje(lenguajeID): Observable<LenguajeDetail>{
+  return this.http.delete<LenguajeDetail>(API_URL + lenguajes + '/' + lenguajeID);
+}
+
 
 }
