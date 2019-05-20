@@ -1,35 +1,15 @@
-<div class = "container fluid">
-  <div class = "col-md-12">
-    <table class = "table table striped">
-      
-        <thead class = "thead-dark">
-          <tr>
-            <th> id </th>
-            <th> nombre </th>
-            <th> apellido </th>
-
-            <th> correo </th>
-            <th> rol </th>
-            <th> puntaje </th>
-            <th> clave </th>
-
-            <th>  </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor = "let usuario of usuarios">
-            <td> {{usuario.id }} </td>
-            <td> {{usuario.nombre}}</td>
-            <td> {{usuario.apellido}}</td>
-            <td> {{usuario.correo}}</td>
-            <td> {{usuario.rol}}</td>
-            <td> {{usuario.puntaje}}</td>
-            <td> {{usuario.clave}}</td>
-
-
-          </tr>
-        </tbody>
-    </table>
+<div class="container-fluid">
+  <div class="col-md-2" *ngFor = "let usuario of usuarios">
+   <div class="card" style="width: 18rem;">
+   <img src="{{usuario.imagen}}" class="card-img-top">
+   <div class="card-body">
+     <h5 class="card-title">{{usuario.nombreUsuario}}</h5>
+     <ul>
+       <li>ID: {{usuario.id}}</li>
+       <li>Nombre: {{usuario.nombre}}</li>
+       <li>Apellido: {{usuario.apellido}}</li>
+     </ul>
+   </div>
+  </div>
   </div>
 </div>
-
