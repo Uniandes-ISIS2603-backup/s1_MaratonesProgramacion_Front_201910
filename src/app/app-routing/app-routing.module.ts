@@ -34,6 +34,8 @@ import { BlogDetailComponent } from './../blog/blog-detail/blog-detail.component
 import { InstitucionListComponent } from './../institucion/institucion-list/institucion-list.component';
 import { InstitucionDetailComponent } from './../institucion/institucion-detail/institucion-detail.component';
 import { InstitucionCreateComponent } from './../institucion/institucion-create/institucion-create.component';
+import { NgxPermissionsModule } from 'ngx-permissions';
+
 const routes: Routes = [
 
      {
@@ -120,11 +122,24 @@ const routes: Routes = [
         path: 'lenguajes',
         children:[{
             path: 'list',
-            component: LenguajeListComponent
+            component: LenguajeListComponent,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         },
         {
             path: ':id',
             component: LenguajeDetailComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         }
         ]
     },
@@ -284,7 +299,8 @@ const routes: Routes = [
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
+        RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'}),
+        NgxPermissionsModule.forRoot()
     ],
     exports: [RouterModule],
     declarations: []
