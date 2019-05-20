@@ -7,6 +7,7 @@ import { SubmissionDetail } from './submission-detail';
 
 const API_URL = "http://localhost:8080/s1_maratones-api/api/";
 const submissions = 'submissions/';
+const ejercicios = 'ejercicios/'
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +33,11 @@ export class SubmissionService {
   postSubmission(submission: Submission): Observable<Submission>{
     return this.http.post<Submission>(API_URL + submissions , submission);
   }
+
+  getSubmissionsDeEjercicio(idEjercicio: string): Observable<Submission[]>
+  {
+    return this.http.get<Submission[]>(API_URL + ejercicios + submissions + idEjercicio);
+  }
+
 
 }

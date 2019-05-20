@@ -89,14 +89,35 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: EjercicioListComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         },
         {
            path: 'add',
-           component: EjercicioCreateComponent     
+           component: EjercicioCreateComponent 
+           ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['COACH']
+                }
+            }    
         },
         {
             path: ':id',
             component: EjercicioDetailComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         }
         ]
     },
@@ -106,14 +127,35 @@ const routes: Routes = [
         children:[{
             path: 'list',
             component: SubmissionListComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         },
         {
             path: 'add',
             component: SubmissionCreateComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE']
+                }
+            }
         },
         {
             path: ':id',
             component: SubmissionDetailComponent
+            ,
+            canActivate: [NgxPermissionsGuard],
+            data: {
+                permissions: {
+                    only: ['PARTICIPANTE', 'COACH']
+                }
+            }
         }
         ]
     },
