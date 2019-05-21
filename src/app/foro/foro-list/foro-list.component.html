@@ -1,16 +1,15 @@
 <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action active">
-          <div class="d-flex w-100 justify-content-between">
+        <a style="background-color:DodgerBlue" class="list-group-item list-group-item-action active">
+          <div  class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Foros de discusión</h5>
-            <small>3 days ago</small>
+
           </div>
-          <p class="mb-1">Participa en discusiones relacionadas a todo sobre maratones de programación!.</p>
-          <button routerLink = "/foros/add" type="button" class="btn btn-secondary btn-lg" >Crear un nuevo foro de discusión</button>
-          
+          <p  class="mb-1">Participa en discusiones relacionadas a todo sobre maratones de programación!.</p>
         </a>
-    
+        <button routerLink = "/foros/add" type="button" class="btn btn-secondary btn-lg" >Crear un nuevo foro de discusión</button>
+
         <a href="#" class="list-group-item list-group-item-action" *ngFor = "let f of foros" routerLink = "/foros/{{f.id}}">
-          
+
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">{{f.nombre}}</h5>
             <small class="text-muted">{{f.fecha}}</small>
@@ -19,4 +18,3 @@
           <small class="text-muted">Donec id elit non mi porta.</small>
         </a>
       </div>
-      

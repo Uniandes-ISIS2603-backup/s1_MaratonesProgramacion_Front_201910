@@ -1,4 +1,5 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {ToastrService} from 'ngx-toastr';
 
 import {ComentarioService} from '../comentario.service';
 
@@ -17,7 +18,8 @@ export class ComentarioCreateComponent implements OnInit {
     * @param toastrService The toastr para mostrar mensajes al usuario.
     */
     constructor(
-        private comentarioService: ComentarioService
+        private comentarioService: ComentarioService,
+        private toastrService: ToastrService
     ) {}
 
     /**
