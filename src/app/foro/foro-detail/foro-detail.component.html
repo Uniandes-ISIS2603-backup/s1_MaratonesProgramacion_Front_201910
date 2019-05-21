@@ -4,7 +4,7 @@
       <p>Descripción: {{foroDetail.descripcion}}</p>
       <p>fecha de creación: {{foroDetail.fecha}}</p>
       <button type="button" routerLink = "/comentarios/add" class="btn btn-primary">Comentar</button>
-      <p class="h4 p-3">comentarios: {{foroDetail.comentarios }}</p>
+      <p class="h4 p-3" *ngFor = "let comentario of foroDetail.comentarios" >comentarios: {{comentario.nombre }}</p>
       <p></p>
 
       </div>

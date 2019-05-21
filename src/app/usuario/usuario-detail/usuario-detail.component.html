@@ -2,15 +2,16 @@
     <h1>Datos</h1>
 
   <div class="container-fluid">
-      <p class="h3"> Nombre:{{usuarioDetail.nombre}} {{usuarioDetail.apellido}}</p>
-      <p class = "h4"> Username: {{usuarioDetail.nombreUsuario}}</p>
-      <p class = "h3"> {{usuarioDetail.rol}}</p>
-      <p class = "h5"> Puntaje: {{usuarioDetail.puntaje}}</p>
-      <p class = "h5"> Correo: {{usuarioDetail.correo}}</p>
+      <p class="h3"> Nombre:{{usuario.nombre}} {{usuario.apellido}}</p>
+      <p class = "h4"> Username: {{usuario.nombreUsuario}}</p>
+      <p class = "h3"> {{usuario.rol}}</p>
+      <p class = "h5"> Puntaje: {{usuario.puntaje}}</p>
+      <p class = "h5"> Correo: {{usuario.correo}}</p>
 
       <!-- solo muestra cada cosa como un json, se debe arreglar -->
-      <p class=  "h5">Lenguajes: {{usuarioDetail.lenguajes}}</p>
-      <p class=  "h5">Equipos: {{usuarioDetail.equipos}}</p>
-      <p class=  "h5">Submissions: {{usuarioDetail.Submissions}}</p>
+
+      <p class=  "h5" *ngFor = "let lenguaje of usuarioDetail.lenguajes">Lenguajes: {{lenguaje.id}}</p>
+      <p class=  "h5">Equipos: {{usuario.equipos}}</p>
+      <p class=  "h5">Submissions: {{usuario.Submissions}}</p>
 
   </div>
