@@ -6,7 +6,7 @@ import {Usuario} from './usuario';
 import {UsuarioDetail} from './usuario-detail';
 
 
-//const API_URL = '../../assets/';
+//sconst API_URL = '../../assets/';
 const API_URL = "http://localhost:8080/s1_maratones-api/api/";
 const usuarios = 'usuarios';
 const usuario = 'usuario-';
