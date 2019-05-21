@@ -6,8 +6,8 @@ import {Usuario} from './usuario';
 import {UsuarioDetail} from './usuario-detail';
 
 
-const API_URL = '../../assets/';
-//const API_URL = "http://localhost:8080/s1_maratones-api";
+//const API_URL = '../../assets/';
+const API_URL = "http://localhost:8080/s1_maratones-api";
 const usuarios = 'usuarios.json';
 const usuario = 'usuario-';
 @Injectable({
