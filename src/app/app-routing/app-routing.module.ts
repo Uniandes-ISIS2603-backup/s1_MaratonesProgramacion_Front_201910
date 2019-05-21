@@ -76,8 +76,9 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'home',
-        component: AuthLoginComponent
+        path: '',
+        redirectTo: '/index',
+        pathMatch: 'full'
     },{
         path: 'index',
         component: IndexComponent

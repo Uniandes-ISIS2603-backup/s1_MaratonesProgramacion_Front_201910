@@ -7,6 +7,7 @@ import { LenguajeDetail } from './lenguaje-detail';
 
 const API_URL = "http://localhost:8080/s1_maratones-api/api/";
 const lenguajes = 'lenguajes';
+const usuarios = 'usuarios/'
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,11 @@ export class LenguajeService {
   getLenguajes() : Observable<Lenguaje[]>
   {
     return this.http.get<Lenguaje[]>(API_URL + lenguajes);
+  }
+
+  getLenguajesUsuario(idUsuario: number) : Observable<Lenguaje[]>
+  {
+    return this.http.get<Lenguaje[]>(API_URL + usuarios + idUsuario + '/' + lenguajes);
   }
 
   getLenguajesDetail(lenguajeId): Observable<LenguajeDetail> {

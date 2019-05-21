@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {Equipo} from './equipo';
 
-const API_URL = "http://localhost:8080/s1_maratones-api";
-const equipos = 'equipos.json';
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
+const equipos = 'equipos/';
 const equipo = 'equipo-';
 @Injectable({
   providedIn: 'root'
