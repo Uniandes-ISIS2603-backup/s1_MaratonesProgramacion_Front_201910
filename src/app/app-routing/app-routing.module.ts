@@ -90,7 +90,7 @@ const routes: Routes = [
         },
         {
            path: 'add',
-           component: EjercicioCreateComponent     
+           component: EjercicioCreateComponent
         },
         {
             path: ':id',
@@ -98,7 +98,7 @@ const routes: Routes = [
         }
         ]
     },
-    
+
     {
         path: 'submissions',
         children:[{
@@ -156,14 +156,14 @@ const routes: Routes = [
             path: ':id',
             component: EquipoDetailComponent
         }
-        
+
         ]
     },
     {
         path: 'competencias',
         children: [{
             path: 'list',
-            component: CompetenciaListComponent 
+            component: CompetenciaListComponent
         },
     {
         path: ':id',
@@ -192,18 +192,18 @@ const routes: Routes = [
                     path: ':id',
                     component: EquipoDetailComponent
                 }
-                
+
                 ]
-            },  
+            },
             {
                 path: 'lugares',
                 children: [{
                     path: 'list',
                     component: LugarCompetenciaListComponent
                 }]
-        
+
             }
-        ]   
+        ]
     }],
     },
     {
@@ -226,7 +226,12 @@ const routes: Routes = [
         },
         {
             path: ':id',
-            component: ForoDetailComponent
+            component: ForoDetailComponent,
+            children:[{
+
+              path: 'comentarios',
+              component: ComentarioListComponent,
+            }]
         }
 
         ]
@@ -260,7 +265,7 @@ const routes: Routes = [
           outlet: 'detail'
         }
         ]
-    
+
       },
     { path: 'instituciones',
     children: [{
@@ -275,7 +280,7 @@ const routes: Routes = [
      {
       path: ':create',
       component: InstitucionCreateComponent,
-      
+
     }
     ]
      }

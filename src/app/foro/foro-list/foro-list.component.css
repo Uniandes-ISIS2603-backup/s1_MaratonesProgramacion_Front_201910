@@ -3,6 +3,10 @@ p {
   font-size: 40px;
 }
 
+p2 {
+  font-family: verdana;
+  font-size: 30px;
+}
 button {width: 250px;
   text-align: center;
 }
