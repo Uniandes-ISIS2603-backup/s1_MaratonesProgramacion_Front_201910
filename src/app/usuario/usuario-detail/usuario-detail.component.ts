@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../usuario';
 import { ActivatedRoute } from '@angular/router';
 
+import {UsuarioDetail} from '../usuario-detail';
+
 import { UsuarioService } from '../usuario.service';
 @Component({
   selector: 'app-usuario-detail',
@@ -10,13 +12,13 @@ import { UsuarioService } from '../usuario.service';
 })
 export class UsuarioDetailComponent implements OnInit {
 
-  
+
   constructor(private usuarioService: UsuarioService,
   private route: ActivatedRoute) { }
 
   Usuario_id: number;
 
-  usuario: Usuario;
+  usuarioDetail: UsuarioDetail;
 
   getUsuarioDetail(): void
   {

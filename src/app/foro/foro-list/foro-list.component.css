@@ -2,3 +2,7 @@ p {
   font-family: verdana;
   font-size: 40px;
 }
+
+button {width: 250px;
+  text-align: center;
+}
