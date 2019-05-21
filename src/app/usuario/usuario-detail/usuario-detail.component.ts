@@ -18,6 +18,8 @@ export class UsuarioDetailComponent implements OnInit {
 
   Usuario_id: number;
 
+  usuario: Usuario;
+
   usuarioDetail: UsuarioDetail;
 
   getUsuarioDetail(): void
