@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {LenguajeService} from '../lenguaje.service';
 import {Lenguaje} from '../lenguaje';
 
@@ -8,6 +8,8 @@ import {Lenguaje} from '../lenguaje';
   styleUrls: ['./lenguaje-list.component.css']
 })
 export class LenguajeListComponent implements OnInit {
+
+  @Input() idUsuario: number;
 
   /** 
   * 
@@ -23,7 +25,7 @@ export class LenguajeListComponent implements OnInit {
  * Asks the service to update the list of editorials
  */
    getLenguajes(): void {
-     this.lenguajeService.getLenguajes().subscribe(lenguajes => this.lenguajes = lenguajes);
+     this.lenguajeService.getLenguajesUsuario(this.idUsuario).subscribe(lenguajes => this.lenguajes = lenguajes);
  }
 
 

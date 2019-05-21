@@ -7,8 +7,8 @@ import {UsuarioDetail} from './usuario-detail';
 
 
 //const API_URL = '../../assets/';
-const API_URL = "http://localhost:8080/s1_maratones-api";
-const usuarios = 'usuarios.json';
+const API_URL = "http://localhost:8080/s1_maratones-api/api/";
+const usuarios = 'usuarios';
 const usuario = 'usuario-';
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,7 @@ export class UsuarioService {
 
   getUsuarioPorId(usuarioId: number): Observable<Usuario>
   {
-    return this.http.get<Usuario>(API_URL + usuario + usuarioId + '.json');
+    return this.http.get<Usuario>(API_URL + usuarios + '/' + usuarioId);
   }
 
   postUsuario(usuario: Usuario):void

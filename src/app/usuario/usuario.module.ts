@@ -4,9 +4,11 @@ import { UsuarioListComponent } from './usuario-list/usuario-list.component';
 import { UsuarioService } from './usuario.service';
 import { UsuarioDetailComponent} from './usuario-detail/usuario-detail.component';
 import { UsuarioCreateComponent } from './usuario-create/usuario-create.component';
+import { LenguajeModule } from '../lenguaje/lenguaje.module';
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    LenguajeModule
   ],
   declarations: [UsuarioListComponent,UsuarioDetailComponent,UsuarioCreateComponent],
   providers: [UsuarioService],
