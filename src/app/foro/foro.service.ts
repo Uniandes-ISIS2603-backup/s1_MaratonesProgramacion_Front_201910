@@ -34,6 +34,6 @@ export class ForoService {
   }
 
     getForosDetail(foroId): Observable<ForoDetail> {
-        return this.http.get<ForoDetail>(API_URL + 'foros' + foroId + '.json'); //API_URL + foros + '/' + foroId
+        return this.http.get<ForoDetail>("assets/" + 'foros' + foroId + '.json'); //API_URL + foros + '/' + foroId
     }
 }
