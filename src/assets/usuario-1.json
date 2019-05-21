@@ -6,7 +6,9 @@
     "nombre":"Pepito",
     "apellido": "Perez",
     "correo": "Pepito123@losAlpes.com",
-    "clave": "123abcd"
+    "clave": "123abcd",
+
+    "lenguajes": [{"nombre": "Java", "experiencia": 1}]
 }
 
 ]
