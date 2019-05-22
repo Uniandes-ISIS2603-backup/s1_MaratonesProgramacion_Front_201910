@@ -18,18 +18,17 @@ export class UsuarioDetailComponent implements OnInit {
 
   Usuario_id: number;
 
-  usuario: Usuario;
-
   usuarioDetail: UsuarioDetail;
+
 
   getUsuarioDetail(): void
   {
-    this.usuarioService.getUsuarioPorId(this.Usuario_id).subscribe(UsuarioDetail =>{ this.usuario = UsuarioDetail});
+    this.usuarioService.getUsuarioPorId(this.Usuario_id).subscribe(UsuDetail =>{ this.usuarioDetail = UsuDetail});
   }
 
   ngOnInit() {
-    this.Usuario_id =+ this.route.snapshot.paramMap.get('id');
-    this.usuario = new Usuario();
+    this.Usuario_id = +this.route.snapshot.paramMap.get('id');
+    this.usuarioDetail = new UsuarioDetail();
     this.getUsuarioDetail();
   }
 

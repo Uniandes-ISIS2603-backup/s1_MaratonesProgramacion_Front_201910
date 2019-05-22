@@ -1,0 +1,14 @@
+[{
+    "id": 1,
+    "rol": "PARTICIPANTE",
+    "nombreUsuario": "elpepitoperez",
+    "imagen": "https://data.whicdn.com/images/294050208/large.jpg",
+    "nombre":"Pepito",
+    "apellido": "Perez",
+    "correo": "Pepito123@losAlpes.com",
+    "clave": "123abcd",
+
+    "lenguajes": [{"nombre": "Java", "experiencia": 1}]
+}
+
+]

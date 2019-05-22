@@ -6,5 +6,16 @@
         "VotosEnContra": 4,
         "fecha": "2019...",
         "tags": "#help",
-        "comentarios":[ "Ford", "BMW", "Fiat" ]
+        "comentarios":[ { "id": 100,
+                        "nombre": "Ford",
+                        "votosAFavor": 4,
+                        "votosEnContra": 4},
+                          {"id": 100,
+                          "nombre": "Ford",
+                          "votosAFavor": 4,
+                          "votosEnContra": 4},
+                          {"id": 100,
+                          "nombre": "Ford",
+                          "votosAFavor": 4,
+                          "votosEnContra": 4} ]
     }
