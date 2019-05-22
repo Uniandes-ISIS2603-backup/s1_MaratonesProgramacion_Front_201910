@@ -1,11 +1,9 @@
-import { Blog } from './../blog/blog';
 
-
-export class BlogDetail extends Blog{
-
+export class BlogDetail {
+  
     id: number;
     fecha  : Date;
     texto: string;
-
+    
 
 }

@@ -1,23 +1,15 @@
 <div class = "container fluid">
   <div class = "col-md-12">
     <table class = "table table striped">
-      
-        <thead class = "thead-dark">
-          <tr>
-            <th> id </th>
-            <th> nombreEquipo </th>
-            
-
-            <th>  </th>
-          </tr>
-        </thead>
         <tbody>
           <tr *ngFor = "let equipo of equipos">
-            <td> {{equipo.id }} </td>
-            <td> {{equipo.nombreEquipo}}</td>
-            
-
-
+              <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <h5 class="card-title"> {{equipo.nombreEquipo}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">id: {{equipo.id}}</h6>
+                    <p class="card-text">Equipo de Institucion Los Alpes</p>
+                  </div>
+                </div>    
           </tr>
         </tbody>
     </table>

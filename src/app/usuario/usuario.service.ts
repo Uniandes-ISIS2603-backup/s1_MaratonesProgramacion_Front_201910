@@ -29,10 +29,9 @@ export class UsuarioService {
 
 
 
-  getUsuarioPorId(usuarioId: number): Observable<UsuarioDetail>
+  getUsuarioPorId(usuarioId: number): Observable<Usuario>
   {
-
-    return this.http.get<UsuarioDetail>(API_URL + usuario + usuarioId + '.json');
+    return this.http.get<Usuario>(API_URL + usuarios + '/' + usuarioId);
   }
 
   postUsuario(usuario: Usuario):void
