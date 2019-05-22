@@ -20,15 +20,15 @@ export class ForoDetailComponent implements OnInit{
 
   ngOnInit() {
     this.foro_id = +this.route.snapshot.paramMap.get('id');
-    
+
     this.foroDetail = new ForoDetail();
     this.getForoDetail();
   }
 
   getForoDetail(): void {
     this.foroService.getForosDetail(this.foro_id)
-        .subscribe(ejerDetail => {
-            this.foroDetail = ejerDetail
+        .subscribe(forDetail => {
+            this.foroDetail = forDetail
         });
   }
 

@@ -1,36 +1,19 @@
-
-  
-  
-  <hr>
-  <h3 >       Lenguajes </h3>
-  <div class="row">
-      <br>
-      <div class="col">
-          <div class = "container fluid">
-              <div class = "col-md-12">
-                <table class = "table table striped">
-                    <thead class = "thead-dark">
-                      <tr>
-                        <th> Lenguaje </th>
-                        <th> Experiencia </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr *ngFor = "let l of lenguajes">
-                        <td style= "cursor:pointer;"> 
-                          <dd class = "figure-caption" routerLink = "/lenguajes/{{l.id}}">{{l.nombre}} </dd></td>
-                        <td> {{l.experiencia}}</td>
-                      </tr>
-                    </tbody>
-                </table>
-              </div>
-            </div>
-      </div>
-      <div class="col">
-        
-        </div>
-      <div class="col">
-        
-        
-      </div>
+<div class = "container fluid">
+    <div class = "col-md-12">
+      <table class = "table table striped">
+          <thead class = "thead-dark">
+            <tr>
+              <th> Nombre </th>
+              <th> Experiencia </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = "let l of lenguajes">
+              <td style= "cursor:pointer;">
+                <dd class = "figure-caption" routerLink = "/lenguajes/{{l.id}}">{{l.nombre}} </dd></td>
+              <td> {{l.experiencia}}</td>
+            </tr>
+          </tbody>
+      </table>
     </div>
+  </div>
