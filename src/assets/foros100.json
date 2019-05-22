@@ -1,0 +1,21 @@
+    {
+        "id": 100,
+        "nombre": "Cómo hago para no perder la materia?",
+        "descripcion": "ayudaaaa",
+        "VotosAFavor": 0,
+        "VotosEnContra": 4,
+        "fecha": "2019...",
+        "tags": "#help",
+        "comentarios":[ { "id": 100,
+                        "nombre": "Ford",
+                        "votosAFavor": 4,
+                        "votosEnContra": 4},
+                          {"id": 100,
+                          "nombre": "Ford",
+                          "votosAFavor": 4,
+                          "votosEnContra": 4},
+                          {"id": 100,
+                          "nombre": "Ford",
+                          "votosAFavor": 4,
+                          "votosEnContra": 4} ]
+    }
