@@ -30,10 +30,10 @@ export class ForoService {
 
   getForos() : Observable<Foro[]>
   {
-    return this.http.get<Foro[]>("assets/" + 'foros' + ".json"); //API_URL + foros
+    return this.http.get<Foro[]>(API_URL + foros); //"assets/" + 'foros' + ".json"
   }
 
     getForosDetail(foroId): Observable<ForoDetail> {
-        return this.http.get<ForoDetail>("assets/" + 'foros' + foroId + '.json'); //API_URL + foros + '/' + foroId
+        return this.http.get<ForoDetail>(API_URL + foros + '/' + foroId); //"assets/" + 'foros' + foroId + '.json'
     }
 }
