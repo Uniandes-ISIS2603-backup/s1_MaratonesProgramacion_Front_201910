@@ -3,7 +3,7 @@ import { Foro } from "./foro";
 
 export class ForoDetail extends Foro{
 
-    
-    comentarios: Comentario[];                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
 
+    comentarios: Comentario[];
+    usuario: Usuario;
 }
