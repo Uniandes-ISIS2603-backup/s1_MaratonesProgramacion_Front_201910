@@ -7,7 +7,7 @@
         "fecha": "2019...",
         "tags": "#help",
         "comentarios":[ { "id": 100,
-                        "nombre": "Ford",
+                        "nombre": "Yaper",
                         "votosAFavor": 4,
                         "votosEnContra": 4},
                           {"id": 100,
@@ -15,7 +15,10 @@
                           "votosAFavor": 4,
                           "votosEnContra": 4},
                           {"id": 100,
-                          "nombre": "Ford",
+                          "nombre": "Fordx",
                           "votosAFavor": 4,
-                          "votosEnContra": 4} ]
+                          "votosEnContra": 4} ],
+
+      "usuario": [{"nombre": "Juan Felipe Peña"}]
+
     }
